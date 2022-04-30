@@ -162,8 +162,8 @@ let eleccion;
                 console.log(cuotas_precio);
             }
             console.log(cuotas_precio);
-            Math.trunc(cuotas_precio);
-            console.log(cuotas_precio);
+            let entero = parseInt(cuotas_precio);
+            console.log(entero);
             subtotal.innerHTML = '';
             subtotal.innerHTML = "El precio final es: $" + cuotas_precio;
             console.log(subtotal);
