@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script defer src="../js/contact/contact.js"></script>
+  <link rel="stylesheet" href="../estilos/main.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg">
+      <div class="container-fluid menu">
+        <a href="../index.html"><img src="../assets/logo.jpg" alt="LOGO" class="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse menu__div" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+            <div class="navbar-nav menu__div__sections">
+              <a class="nav-link Home menu__div__sections__link" aria-current="page" href="../index.html">Home</a>
+              <a class="nav-link  menu__div__sections__link" href="#">Contactanos</a>
+              <a href="carrito.html" class="nav-link menu__div__sections__link">CARRITO</a>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </nav>
+</header>
+<main class="main_form" >
+    <form action="" method="get" enctype="text/plain" id="my_form">
+      <fieldset>
+        <img src="../assets/correo.svg" alt="correo" class="correo">
+        <div class="contenedor_form">
+          <input type="text" name="userName" id="contact_name" class="input_texto" placeholder="Nombre" required>
+          <span class="label_flotante">Nombre</span>
+      </div>
+        <div class="contenedor_form">
+          <input type="email" name="user_Email" id="email" class="input_texto" placeholder="Correo electrónico" required>
+          <span class="label_flotante">Correo electrónico</span>
+          
+        </div>
+        <div class="contenedor_form">
+          <textarea name="" id="" cols="30" rows="10" class="input_texto" placeholder="Escribinos tu mensaje" required></textarea>
+          <span class="label_flotante">Escribinos tu mensaje</span>
+        </div>
+        <div>
+          <button type="reset" class="btn">Reset</button>
+          <button type="submit" class="btn">Enviar</button>
+        </div>
+      </fieldset>
+    </form>
+</main>
+<footer class="footer">
+  <a href="../index.html"><img src="../assets/logo.jpg" alt="LOGO" class="logo footer__img"></a>
+    <div class="redes">
+      <img class="redes__sociales" src="../assets/whattsapp.png" alt="WPP"><a href=""></a>
+      <img class="redes__sociales" src="../assets/twitter.png" alt="Twitter"><a href=""></a>
+      <img class="redes__sociales" src="../assets/instagram_a.png" alt="Instagram"><a href=""></a>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

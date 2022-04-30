@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de pago</title>
+    <script defer src="../js/carrito/pago.js"></script>
+    <script src="../js/carrito/carrito.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.5.0/math.js"></script>
+    <link rel="stylesheet" href="../estilos/main.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg">
+          <div class="container-fluid menu">
+            <a href="../index.html"><img src="../assets/logo.jpg" alt="LOGO" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse menu__div" id="navbarSupportedContent">
+              <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                <div class="navbar-nav menu__div__sections">
+                  <a class="nav-link Home menu__div__sections__link" aria-current="page" href="../index.html">Home</a>
+                  <a class="nav-link  menu__div__sections__link" href="contacto.html">Contactanos</a>
+                  <a href="carrito.html" class="nav-link menu__div__sections__link">CARRITO</a>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+        </nav>
+    </header>
+    <main>
+    <h1>PAGO</h1>
+    <div id="back"></div>
+    <div id="precio"></div>
+    <div id="contenedor">
+        <!--Seccion tarjeta-->
+        <section id="card">
+            <div id="front">
+                <div id="logo_marca">
+                </div>
+                <img id="chip" src="../assets/chip.jpg" alt="">
+                <div id="card_numer">
+                    <p class="label">Número de tarjeta</p>
+                    <p class="number" id="number"></p>
+                </div>
+                <div id="grupo_datos">
+                    <div id="card_name">
+                        <p class="label">Nombre del titular</p>
+                        <p id="name">XXXXXXX XXXXX</p>
+                    </div>
+                    <div id="expiracion">
+                        <p class="label">Fecha de expiracion</p>
+                        <p id="date"><span id="month">MM</span> / <span id="year">YY</span></p>
+                    </div>
+                </div>
+            </div>
+            <div id="trasera">
+                <div class="black"></div>
+                <div id="code">
+                    <div class="container_code">
+                    <p class="label">CVV</p>
+                    <div class="cvv_div">
+                        <p id="cvv">###</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <!--BOTON-->
+        <div id="container_btn">
+            <button id="abrir_form"><i class="fas fa-plus"></i></button>
+        </div>
+        <!--Form-->
+        <form action="" id="form_card">
+            <div>
+                <label for="inputNumero">Número tarjeta</label>
+                <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+            </div>
+            <div>
+                <label for="inputNombre">Nombre</label>
+                <input type="text" id="inputNombre" autocomplete="off">
+            </div>
+            <div class="flexbox">
+                <div class="grupo_expira">
+                    <label for="selectMes">expiracion</label>
+                    <div class="flexbox">
+                        <div class="group_select">
+                            <select name="mes" id="selectMes">
+                                <option disabled selected>Mes</option>
+                            </select>
+                        </div>
+                        <div class="group_select">
+                            <select name="year" id="selectYear">
+                                <option disabled selected>Año</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="cvv">
+                    <label for="inputCvv">CVV</label>
+                    <input type="text" id="inputCvv" autocomplete="off" maxlength="3">
+                </div>       
+        </div>
+        <div id="div_cuotas">
+            <select name="cuotas" id="inputCuotas">
+                <option disabled selected>Cuotas</option>
+            </select>
+        </div>
+        <button id="btn_enviar" type="submit">Enviar</button>
+        </form>
+
+    </div>
+</main>
+</body>
+<footer class="footer">
+    <a href="../index.html"><img src="../assets/logo.jpg" alt="LOGO" class="logo footer__img"></a>
+      <div class="redes">
+        <img class="redes__sociales" src="../assets/whattsapp.png" alt="WPP"><a href=""></a>
+        <img class="redes__sociales" src="../assets/twitter.png" alt="Twitter"><a href=""></a>
+        <img class="redes__sociales" src="../assets/instagram_a.png" alt="Instagram"><a href=""></a>
+      </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+</html>

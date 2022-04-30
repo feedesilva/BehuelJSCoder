@@ -1,0 +1,73 @@
+.main_form{
+    height: 70vh;
+}
+form{
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    text-align: left;
+}
+
+fieldset{
+    border: none;
+    text-align: center;
+}
+
+.saludo{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contenedor_form{
+    position: relative;
+    width: 100%;
+    border-radius: 0px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.input_texto{
+    font-size: 14px;
+    width: 90%;
+    padding: 5px;
+    border: 0;
+    margin-top: 18px;
+    margin-left: 15px;
+    outline: none;
+    border-radius: 10px;
+}
+
+.label_flotante{
+    position: absolute;
+    pointer-events: none;
+    left: 35px;
+    top: 20px;
+    transition: .2s ease all;
+}
+
+.input_texto:focus + .label_flotante, .input_texto:not(:placeholder-shown) + .label_flotante {
+
+    transform: translate(-0.3rem, -1.5rem);
+    color: white;
+    font-size: 12px;
+}
+
+.input_texto::placeholder{
+    color: transparent;
+}
+
+.btn{
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+   
+}
+
+.btn:hover{
+    background-color: lightblue;
+}
+
+.title{
+    color: rgb(117, 231, 206);
+}

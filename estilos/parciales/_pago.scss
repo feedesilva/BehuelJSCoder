@@ -1,0 +1,241 @@
+#contenedor{
+    width: 90%;
+    max-width: 1000px;
+    padding:40px 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+#card{
+    width: 100%;
+    max-width: 550px;
+    position: relative;
+    color: white;
+    transition: all .3s ease; 
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    cursor: pointer;
+    z-index: 2; //prioridad de superposicion
+}
+
+#card.active{
+    transform: rotateY(180deg);
+}
+
+#card>div{
+    padding: 30px;
+    border-radius: 15px;
+    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3);
+}
+
+//PARTE DELANTERA//
+#card #front{
+    width: 100%;
+    background: url(../assets/bg-card.jpg);
+    background-size: cover;
+}
+#front #logo_marca{
+    text-align: right;
+    min-height: 50px;
+}
+#front #logo_marca img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    max-width: 80px; //para que no ocupe ancho completo
+}
+
+#front #chip{
+    width: 100%;
+    max-width: 50px;
+    margin-bottom: 20px;
+}
+
+ .label{
+    font-size: 1rem;
+    color: #7d8994;
+    margin-bottom: 5px;
+}
+
+#front #number, #name, #date{
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase; //Llevo a mayúsculas
+}
+#grupo_datos{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+//PARTE TRASERA//
+#trasera{
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    flex-flow: column wrap;
+    background: url(../assets/bg-card.jpg);
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;    
+}
+#trasera .black{
+    background-color: black;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    height: 40px;
+    width: 100%;
+}
+
+#code{
+    
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 130px;
+}
+
+.container_code{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#datos p{
+    margin-bottom: 5px;
+}
+
+.cvv_div{
+    background-color: white;
+    width: 80px;
+    height: 30px;
+    
+}
+#cvv{
+    text-align: center;
+    color: black;
+    margin-top: 3px;
+}
+
+
+//contenedor boton//
+#abrir_form{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 20px;
+    color: white;
+    position: relative;
+    top: -25px;
+    z-index: 3;
+    border-radius: 100%;
+    background-color: blue;
+    padding: 5px;
+    transition: all .2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+#abrir_form:hover{
+background-color: rgb(5, 5, 173);
+}
+
+#abrir_form.active{
+    transform: rotate(45deg);
+}
+
+//FORM//
+#form_card{
+    background-color: white;
+    width: 100%;
+    max-width: 700px;
+    padding: 150px 30px 30px 30px;
+    border-radius: 20px;
+    position: relative;
+    top: -150px;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0 ); //Escondo el formulario//
+    transition: all 0.2s ease;
+}
+
+#form_card.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100% );
+}
+ #form_card label{
+     display: block;
+     margin-bottom: 5px;
+     color: #7d8994;
+     font-size: 1rem;
+ }
+
+ #form_card input, select, .btn_enviar{
+     border: 2px solid aquamarine;
+     font-size: 18px;
+     height: 50px;
+     width: 100%;
+     padding: 5px 12px;
+     transition: all .3s ease;
+     border-radius: 5px;
+ }
+
+#form_card input{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.flexbox{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cvv{
+    min-width: 100px
+}
+.grupo_expira{
+  width: 100%;
+}
+
+.group_select{
+    width: 100%;
+    margin-right: 20px;
+}
+
+#btn_enviar{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: lightblue;
+    &:hover{
+        background-color: blue;
+    }
+}
+
+#precio{
+    background-color: white;
+    width: 30%;
+    height: 5vh;
+    border-radius: 30px;
+    margin-left: 75px;
+}
+
+.precioFinal{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+#div_cuotas{
+    margin-bottom: 5px;
+    width: 25%;
+}

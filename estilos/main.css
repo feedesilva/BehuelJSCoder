@@ -1,0 +1,731 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+nav {
+  height: 23vh;
+}
+
+.logo {
+  width: 7rem;
+  border: none;
+  border-radius: 5rem;
+}
+
+.bg_menu {
+  background-color: lightblue;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.menu__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.menu__div__sections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  justify-items: flex-end;
+  margin: 1rem;
+}
+
+.menu__div__sections__link {
+  color: black;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin: 0.1rem;
+  border: 1px solid black;
+  border-radius: 14px;
+  background-color: white;
+}
+
+main {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#636363), to(lightblue));
+  background-image: linear-gradient(to bottom, #636363, lightblue);
+  height: 170vh;
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+}
+
+.home__div__p {
+  margin: 1.2rem 0;
+}
+
+.home__div__btn {
+  width: 8rem;
+  height: 7vh;
+  border-radius: 1rem;
+  border: none;
+  background-color: lightblue;
+  padding: 10px;
+}
+
+.home__portada {
+  margin: 10px 10px;
+  padding: 10px;
+  width: 45%;
+}
+
+#link_index {
+  padding: 0.625rem;
+  color: white;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+}
+
+.solicitados {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+.card_producto {
+  margin: 50px 70px;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+.card_producto__img {
+  height: 50vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.card_producto__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5px;
+  text-align: center;
+}
+
+.card_producto__div a {
+  text-align: left;
+}
+
+.comprar {
+  color: red;
+  padding: 5px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.main_form {
+  height: 70vh;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  text-align: left;
+}
+
+fieldset {
+  border: none;
+  text-align: center;
+}
+
+.saludo {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contenedor_form {
+  position: relative;
+  width: 100%;
+  border-radius: 0px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.input_texto {
+  font-size: 14px;
+  width: 90%;
+  padding: 5px;
+  border: 0;
+  margin-top: 18px;
+  margin-left: 15px;
+  outline: none;
+  border-radius: 10px;
+}
+
+.label_flotante {
+  position: absolute;
+  pointer-events: none;
+  left: 35px;
+  top: 20px;
+  -webkit-transition: .2s ease all;
+  transition: .2s ease all;
+}
+
+.input_texto:focus + .label_flotante, .input_texto:not(:placeholder-shown) + .label_flotante {
+  -webkit-transform: translate(-0.3rem, -1.5rem);
+          transform: translate(-0.3rem, -1.5rem);
+  color: white;
+  font-size: 12px;
+}
+
+.input_texto::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.input_texto:-ms-input-placeholder {
+  color: transparent;
+}
+
+.input_texto::-ms-input-placeholder {
+  color: transparent;
+}
+
+.input_texto::placeholder {
+  color: transparent;
+}
+
+.btn {
+  width: 150px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: lightblue;
+}
+
+.title {
+  color: #75e7ce;
+}
+
+.group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.productWrapper {
+  margin: 2%;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 30px;
+}
+
+.productInfo {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.imagen {
+  width: 150px;
+  height: 30vh;
+  margin: 10px;
+}
+
+.agregar {
+  margin: 10px;
+}
+
+#mainContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#productos, #shopp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  border: 2px solid cornflowerblue;
+  border-radius: 20px;
+  padding: 3%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 40%;
+  margin-left: 20px;
+}
+
+#contenedor {
+  width: 90%;
+  max-width: 1000px;
+  padding: 40px 20px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#card {
+  width: 100%;
+  max-width: 550px;
+  position: relative;
+  color: white;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#card.active {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+#card > div {
+  padding: 30px;
+  border-radius: 15px;
+  min-height: 315px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3);
+          box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3);
+}
+
+#card #front {
+  width: 100%;
+  background: url(../assets/bg-card.jpg);
+  background-size: cover;
+}
+
+#front #logo_marca {
+  text-align: right;
+  min-height: 50px;
+}
+
+#front #logo_marca img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 80px;
+}
+
+#front #chip {
+  width: 100%;
+  max-width: 50px;
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 1rem;
+  color: #7d8994;
+  margin-bottom: 5px;
+}
+
+#front #number, #name, #date {
+  color: white;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+#grupo_datos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin-top: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#trasera {
+  width: 100%;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  background: url(../assets/bg-card.jpg);
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+#trasera .black {
+  background-color: black;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  height: 40px;
+  width: 100%;
+}
+
+#code {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 130px;
+}
+
+.container_code {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#datos p {
+  margin-bottom: 5px;
+}
+
+.cvv_div {
+  background-color: white;
+  width: 80px;
+  height: 30px;
+}
+
+#cvv {
+  text-align: center;
+  color: black;
+  margin-top: 3px;
+}
+
+#abrir_form {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 20px;
+  color: white;
+  position: relative;
+  top: -25px;
+  z-index: 3;
+  border-radius: 100%;
+  background-color: blue;
+  padding: 5px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+#abrir_form:hover {
+  background-color: #0505ad;
+}
+
+#abrir_form.active {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#form_card {
+  background-color: white;
+  width: 100%;
+  max-width: 700px;
+  padding: 150px 30px 30px 30px;
+  border-radius: 20px;
+  position: relative;
+  top: -150px;
+  z-index: 1;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+#form_card.active {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+#form_card label {
+  display: block;
+  margin-bottom: 5px;
+  color: #7d8994;
+  font-size: 1rem;
+}
+
+#form_card input, select, .btn_enviar {
+  border: 2px solid aquamarine;
+  font-size: 18px;
+  height: 50px;
+  width: 100%;
+  padding: 5px 12px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  border-radius: 5px;
+}
+
+#form_card input {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cvv {
+  min-width: 100px;
+}
+
+.grupo_expira {
+  width: 100%;
+}
+
+.group_select {
+  width: 100%;
+  margin-right: 20px;
+}
+
+#btn_enviar {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  background-color: lightblue;
+}
+
+#btn_enviar:hover {
+  background-color: blue;
+}
+
+#precio {
+  background-color: white;
+  width: 30%;
+  height: 5vh;
+  border-radius: 30px;
+  margin-left: 75px;
+}
+
+.precioFinal {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+}
+
+#div_cuotas {
+  margin-bottom: 5px;
+  width: 25%;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: lightblue;
+}
+
+.footer__img {
+  margin: 1.5rem;
+}
+
+.redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin: 2rem;
+}
+
+.redes__sociales {
+  margin: 0.5rem;
+}
+/*# sourceMappingURL=main.css.map */

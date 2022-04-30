@@ -1,0 +1,19 @@
+.footer{    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightblue;
+    &__img{
+        margin: 1.5rem;
+    }
+}
+
+.redes{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 2rem;
+    &__sociales{
+        margin: 0.5rem;
+    }
+}

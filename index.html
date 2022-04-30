@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behuel</title>
+    <script src="./js/index/index.js"></script>
+    <script defer src="./js/index/solicitados.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./estilos/main.css">
+</head>
+<body onload="init()">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg">
+        <div class="container-fluid menu">
+          <a href="./index.html"><img src="./assets/logo.jpg" alt="LOGO" class="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse menu__div" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+              <div class="navbar-nav menu__div__sections">
+                <a class="nav-link Home menu__div__sections__link" aria-current="page" href="#">Home</a>
+                <a class="nav-link  menu__div__sections__link" href="./sections/contacto.html">Contactanos</a>
+                <a href="./sections/carrito.html" class="nav-link menu__div__sections__link">CARRITO</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+        <!--Quienes somos, foto y btn a productos-->
+        <h1>BEHUEL</h1>
+        <h2>HOAL</h2>
+        <div class="home">
+            <div class="home__div">
+                <h2>¿Quiénes somos?</h2>
+                <p class="home__div__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ex repellendus nihil exercitationem dolore reprehenderit?</p>
+                <button class="home__div__btn"><a id="link_index" href="sections/carrito.html"></a></button>
+            </div>
+            <img class="home__portada" src="./assets/logo.jpg" alt="Foto de portada">
+        </div>  
+
+        <div class="info">
+          <h2>Los más pedidos</h2>
+          <div id="solicitados" class="solicitados">
+         
+              <div class="card_producto" style="width: 18rem;">
+                <img src="./assets/marroc_1.jpg" class="card-img-top card_producto__img" alt="marroc">
+                <div class="card-body card_producto__div">
+                  <h5 class="card-title">Marroc</h5>
+                <p class="card-text">Precio: $200</p>
+                <div class="buy_product"></div>
+              </div>
+            </div>
+            <div class="card_producto" style="width: 18rem;">
+              <img src="./assets/brownie_limon3.jpg" class="card-img-top  card_producto__img" alt="Brownie de limon">
+              <div class="card-body  card_producto__div">
+                <h5 class="card-title">Brownnie</h5>
+                <p class="card-text">Precio: $300</p>
+                <div class="buy_product"></div>
+              </div>
+            </div>
+            <div class="card_producto" style="width: 18rem;">
+              <img src="./assets/cookies_1.jpg" class="card-img-top  card_producto__img" alt="cookies">
+              <div class="card-body card_producto__div">
+                <h5 class="card-title">Cookies</h5>
+                <p class="card-text">Precio: $400</p>
+                <div class="buy_product"></div>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      </main>
+    <hr>  
+    <footer class="footer">
+      <a href="./index.html"><img src="./assets/logo.jpg" alt="LOGO" class="logo footer__img"></a>
+        <div class="redes">
+          <img class="redes__sociales" src="./assets/whattsapp.png" alt="WPP"><a href=""></a>
+          <img class="redes__sociales" src="./assets/twitter.png" alt="Twitter"><a href=""></a>
+          <img class="redes__sociales" src="./assets/instagram_a.png" alt="Instagram"><a href=""></a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
