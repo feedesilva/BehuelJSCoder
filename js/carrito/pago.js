@@ -110,6 +110,7 @@ inputNum.addEventListener("keypress", (e)=>{
         banco = visa; 
         card_img.src = "../assets/visa.png";
         div_img.appendChild(card_img);
+        calcularIntereses();
     }
   
 
@@ -121,14 +122,73 @@ inputNum.addEventListener("keypress", (e)=>{
         banco = master;
         card_img.src = "../assets/master.png";
         div_img.appendChild(card_img);
+        calcularIntereses();
     }
 }
 })
+function calcularIntereses(){
+    let cuotas_precio = JSON.parse(localStorage.getItem("Precio"));
+    let cuotas = document.querySelector("#inputCuotas");
+    let eleccion;
+    let interes = 1; 
+    createOptions();
+    if(inputNum.value[0] ==4){
+        cuotas.addEventListener("change", ()=>{
+            interesVisa();
+        })
+    }
+    /*
+    if(inputNum.value[0] == 3){
+        cuotas.addEventListener("change", ()=>{
+            interesMaster();
+        })
+    }
+    */
+}
+function createOptions(){
+    for(let i = 1; i<=6; i++){
+        if(i===1 || i%3 === 0){
+            let option = document.createElement("option");
+            if(i===1){
+                option.value = i;
+                option.innerText = i;
+            }
+            if(i===3){
+                option.value = i;
+                option.innerText=i;
+            }
+            if(i===6){
+                option.value = i;
+                option.innerText=i;
+            }
+            cuotas.appendChild(option);
+        }
+    }
+}
 
-let cuotas_precio = JSON.parse(localStorage.getItem("Precio"));
-let cuotas = document.querySelector("#inputCuotas");
-let eleccion;
-let interes = 1; 
+function interesVisa(){
+    cuotas_precio = cuotas_precio/interes
+            if(cuotas.value === '1'){
+                interes = 1
+                console.log(cuotas_precio);
+            }
+            if(cuotas.value === '3'){
+                interes = 1.1;
+                console.log(cuotas_precio);
+            }
+            if(cuotas.value === '6'){
+                interes = 1.2; 
+                console.log(cuotas_precio);
+            }
+            cuotas_precio*=interes;
+            console.log(cuotas_precio);
+            let precio_Int = parseInt(cuotas_precio);
+            subtotal.innerHTML = '';
+            subtotal.innerHTML = "El precio final es: $" + precio_Int;
+            console.log(subtotal);
+            div_precio.appendChild(subtotal);
+}
+/*
     if(banco === visa){
         for(let i = 1; i<=6; i++){
             if(i===1 || i%3 === 0){
@@ -172,7 +232,7 @@ let interes = 1;
             div_precio.appendChild(subtotal);
         })
     }
-   
+   */
 /*
     else{
         if(banco === master){
