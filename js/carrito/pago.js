@@ -192,6 +192,10 @@ let interes = 1;
                     option.value = i;
                     option.innerText=i;
                 }
+                if(i===9){
+                    option.value = i;
+                    option.innerText=i;
+                }
                 cuotas.appendChild(option);
             }
         }
