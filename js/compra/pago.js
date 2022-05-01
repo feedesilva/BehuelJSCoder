@@ -258,7 +258,10 @@ inputCvv.addEventListener("keypress", (e)=>{
 let container_all = document.querySelector("#contenedor")
 let send = document.querySelector("#btn_enviar");
 send.addEventListener("click", () => {
-    container_all.innerHTML = `<h3> PRONTO TENDRA NOVEDADES </h3>`
+    Swal.fire({
+        title: "Compra procesada",
+        icon: "success",
+    })
 })
 
 
