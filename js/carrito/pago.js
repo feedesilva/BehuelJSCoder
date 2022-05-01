@@ -75,8 +75,7 @@ let div_img = document.querySelector("#logo_marca");
 let card_number = document.querySelector("#number");
 let inputNum = document.querySelector("#inputNumero");
 let banco; 
-let visa;
-let master; 
+
 
 inputNum.addEventListener("keypress", (e)=>{
     mostrarFrente();
@@ -107,7 +106,7 @@ inputNum.addEventListener("keypress", (e)=>{
         div_img.innerHTML = '';
         const card_img = document.createElement("img");
         console.log("visa");
-        banco = visa; 
+        banco = 'visa'; 
         card_img.src = "../assets/visa.png";
         div_img.appendChild(card_img);
     }
@@ -118,7 +117,7 @@ inputNum.addEventListener("keypress", (e)=>{
         div_img.innerHTML = ''; 
         const card_img = document.createElement("img");
         console.log("MASTER");
-        banco = master;
+        banco = 'master';
         card_img.src = "../assets/master.png";
         div_img.appendChild(card_img);
     }
@@ -131,7 +130,7 @@ let cuotas = document.querySelector("#inputCuotas");
 let eleccion;
 let interes = 1; 
 switch (banco) {
-    case visa:
+    case 'visa':
         for(let i = 1; i<=6; i++){
             if(i===1 || i%3 === 0){
                 let option = document.createElement("option");
@@ -176,7 +175,7 @@ switch (banco) {
         })
         break;
 
-        case master:
+        case 'master':
             console.log("BANC MASTER");
         for(let i = 1; i<=9; i++){
             if(i===1 || i%3 === 0){
