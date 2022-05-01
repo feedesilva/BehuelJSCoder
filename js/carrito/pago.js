@@ -129,7 +129,8 @@ let cuotas_precio = JSON.parse(localStorage.getItem("Precio"));
 let cuotas = document.querySelector("#inputCuotas");
 let eleccion;
 let interes = 1; 
-    if(banco === visa){
+switch (banco) {
+    case visa:
         for(let i = 1; i<=6; i++){
             if(i===1 || i%3 === 0){
                 let option = document.createElement("option");
@@ -172,9 +173,9 @@ let interes = 1;
             console.log(subtotal);
             div_precio.appendChild(subtotal);
         })
-    }
-else{
-        if(banco === master){
+        break;
+
+        case master:
             console.log("BANC MASTER");
         for(let i = 1; i<=9; i++){
             if(i===1 || i%3 === 0){
@@ -227,7 +228,10 @@ else{
             console.log(subtotal);
             div_precio.appendChild(subtotal);
         })
-        }}
+    default:
+        break;
+}
+
      
 //Input Nombre//
 let inputName = document.querySelector("#inputNombre")
