@@ -150,7 +150,8 @@ let interes = 1;
         }
         cuotas.addEventListener("change", ()=>{
             console.log(cuotas.value);
-            cuotas_precio -= cuotas_precio*interes
+            cuotas_precio = cuotas_precio/interes
+            console.log(cuotas_precio);
             if(cuotas.value === '1'){
                 interes = 1
                 console.log(cuotas_precio);
