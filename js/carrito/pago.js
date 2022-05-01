@@ -193,6 +193,7 @@ let interes = 1;
                     option.innerText=i;
                 }
                 if(i===9){
+                    console.log("9 cuotas");
                     option.value = i;
                     option.innerText=i;
                 }
