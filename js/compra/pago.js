@@ -261,6 +261,7 @@ send.addEventListener("click", () => {
     Swal.fire({
         title: "Compra procesada",
         icon: "success",
+        confirmButtonText: "Genial",
     })
 })
 

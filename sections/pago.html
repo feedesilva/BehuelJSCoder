@@ -77,23 +77,23 @@
         <form action="" id="form_card">
             <div>
                 <label for="inputNumero">Número tarjeta</label>
-                <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+                <input type="text" id="inputNumero" maxlength="19" autocomplete="off" required>
             </div>
             <div>
                 <label for="inputNombre">Nombre</label>
-                <input type="text" id="inputNombre" autocomplete="off">
+                <input type="text" id="inputNombre" autocomplete="off" required>
             </div>
             <div class="flexbox">
                 <div class="grupo_expira">
                     <label for="selectMes">expiracion</label>
                     <div class="flexbox">
                         <div class="group_select">
-                            <select name="mes" id="selectMes">
+                            <select name="mes" id="selectMes" required>
                                 <option disabled selected>Mes</option>
                             </select>
                         </div>
                         <div class="group_select">
-                            <select name="year" id="selectYear">
+                            <select name="year" id="selectYear" required>
                                 <option disabled selected>Año</option>
                             </select>
                         </div>
@@ -101,11 +101,11 @@
                 </div>
                 <div class="cvv">
                     <label for="inputCvv">CVV</label>
-                    <input type="text" id="inputCvv" autocomplete="off" maxlength="3">
+                    <input type="text" id="inputCvv" autocomplete="off" maxlength="3" required>
                 </div>       
         </div>
         <div id="div_cuotas">
-            <select name="cuotas" id="inputCuotas">
+            <select name="cuotas" id="inputCuotas" required>
                 <option disabled selected>Cuotas</option>
             </select>
         </div>
