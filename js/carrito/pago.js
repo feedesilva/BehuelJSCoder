@@ -131,9 +131,8 @@ let cuotas = document.querySelector("#inputCuotas");
 let eleccion;
 let interes = 1; 
 function calcularIntereses(){
-    if(!option)
-    createOptions();
     if(inputNum.value[0] ==4){
+        createOptions();
         cuotas.addEventListener("change", ()=>{
             interesVisa();
         })
