@@ -173,8 +173,7 @@ let interes = 1;
             div_precio.appendChild(subtotal);
         })
     }
-   
-
+else{
         if(banco === master){
         for(let i = 1; i<=9; i++){
             if(i===1 || i%3 === 0){
@@ -227,15 +226,8 @@ let interes = 1;
             console.log(subtotal);
             div_precio.appendChild(subtotal);
         })
-        }
-        else{
-            let option = document.createElement("option");
-            option.value="No valido";
-            option.innerText="No valido";
-            cuotas.appendChild(option);
-
-
-        }
+        }}
+     
 //Input Nombre//
 let inputName = document.querySelector("#inputNombre")
 inputName.addEventListener("keypress", (e)=>{
