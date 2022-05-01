@@ -228,7 +228,14 @@ let interes = 1;
             div_precio.appendChild(subtotal);
         })
         }
-        
+        else{
+            let option = document.createElement("option");
+            option.value="No valido";
+            option.innerText="No valido";
+            cuotas.appendChild(option);
+
+
+        }
 //Input Nombre//
 let inputName = document.querySelector("#inputNombre")
 inputName.addEventListener("keypress", (e)=>{
