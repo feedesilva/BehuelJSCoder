@@ -174,63 +174,57 @@ let interes = 1;
         })
     }
    
-/*
+
     else{
         if(banco === master){
-            for(let i = 1; i<=9; i++){
-                if(i===1 || i%3 === 0){
-                    let option = document.createElement("option");
-                    if(i===1){
-                        option.value = i;
-                        option.innerText=`${i} Sin interes`;
-                    }
-                    if(i===3){
-                        option.value = i;
-                        option.innerText=`${i} 10% interés`;
-                    }
-                    if(i===6){
-                        option.value = i;
-                        option.innerText=`${i} 20% interés`;
-                    }
-                    if(i===9){
-                        option.value = i;
-                        option.innerText=`${i} 30% interés`;
-                    }
-                    cuotas.appendChild(option);
-    
-                  
-                        if(option.value === 1){
-                            cuotas_precio = cuotas_precio * 1;
-                            console.log("Enrto en 1");
-                            cant_cuotas = i;
-                        }
-                        if(option.value === 3){
-                            cuotas_precio = cuotas_precio * 1.1;
-                            cant_cuotas = i;
-                            console.log("Enrto en 3");
-    
-                        }
-                        if(option.value === 6){
-                            cuotas_precio = cuotas_precio * 1.2;
-                            cant_cuotas = i;
-                            console.log("Enrto en 6");
-    
-                        }
-                        if(option.value === 9){
-                            cuotas_precio = cuotas_precio * 1.3;
-                            cant_cuotas = i;
-                            console.log("Enrto en 9");
-    
-                        }
-                 
+        for(let i = 1; i<=9; i++){
+            if(i===1 || i%3 === 0){
+                let option = document.createElement("option");
+                if(i===1){
+                    option.value = i;
+                    option.innerText = i;
                 }
+                if(i===3){
+                    option.value = i;
+                    option.innerText=i;
+                }
+                if(i===6){
+                    option.value = i;
+                    option.innerText=i;
+                }
+                cuotas.appendChild(option);
             }
-            
-            
         }
+        cuotas.addEventListener("change", ()=>{
+            console.log(cuotas.value);
+            cuotas_precio = cuotas_precio/interes;
+            console.log(cuotas_precio);
+            if(cuotas.value === '1'){
+                interes = 1
+                console.log(cuotas_precio);
+            }
+            if(cuotas.value === '3'){
+                interes = 1.1;
+                console.log(cuotas_precio);
+            }
+            if(cuotas.value === '6'){
+                interes = 1.2; 
+                console.log(cuotas_precio);
+            }
+            if(cuotas.value === '9'){
+                interes = 1.3; 
+                console.log(cuotas_precio);
+            }
+            cuotas_precio*=interes;
+            console.log(cuotas_precio);
+            let precio_Int = parseInt(cuotas_precio);
+            subtotal.innerHTML = '';
+            subtotal.innerHTML = "El precio final es: $" + precio_Int;
+            console.log(subtotal);
+            div_precio.appendChild(subtotal);
+        })
     }
-    */
-   
+}
 
 //Input Nombre//
 let inputName = document.querySelector("#inputNombre")
