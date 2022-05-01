@@ -124,6 +124,7 @@ inputNum.addEventListener("keypress", (e)=>{
     }
 }
 })
+    console.log(banco);
 
 let cuotas_precio = JSON.parse(localStorage.getItem("Precio"));
 let cuotas = document.querySelector("#inputCuotas");
