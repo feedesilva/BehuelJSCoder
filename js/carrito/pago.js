@@ -127,8 +127,91 @@ inputNum.addEventListener("keypress", (e)=>{
 
 let cuotas_precio = JSON.parse(localStorage.getItem("Precio"));
 let cuotas = document.querySelector("#inputCuotas");
-let eleccion;
 let interes = 1; 
+let precioInt = 0;
+if(banco === 1){
+    crearOpcion();
+    cuotas.appendChild(option);
+    cuotas.addEventListener("change", ()=>{
+        cuotas_precio = cuotas_precio/interes;
+        calculoInteresVisa();
+        subtotal.innerHTML = '';
+        subtotal.innerHTML = "El precio final es: $" + precio_Int;
+        console.log(subtotal);
+        div_precio.appendChild(subtotal);
+    })
+}
+if(banco === 2){
+    crearOpcion();
+    cuotas.appendChild(option);
+    cuotas.addEventListener("change", ()=>{
+        cuotas_precio = cuotas_precio/interes;
+        calculoPrecioMaster();
+        subtotal.innerHTML = '';
+        subtotal.innerHTML = "El precio final es: $" + precio_Int;
+        console.log(subtotal);
+        div_precio.appendChild(subtotal);
+    })
+}
+
+function calculoPrecioMaster(){
+    if(cuotas.value === '1'){
+        interes = 1
+        console.log(cuotas_precio);
+    }
+    if(cuotas.value === '3'){
+        interes = 1.2;
+        console.log(cuotas_precio);
+    }
+    if(cuotas.value === '6'){
+        interes = 1.5; 
+        console.log(cuotas_precio);
+    }
+    if(cuotas.value === '9'){
+        interes = 1.3; 
+        console.log(cuotas_precio);
+    }
+    cuotas_precio*=interes;
+    precio_Int = parseInt(cuotas_precio);
+}
+
+function calculoInteresVisa(){
+    if(cuotas.value === '1'){
+        interes = 1
+        console.log(cuotas_precio);
+    }
+    if(cuotas.value === '3'){
+        interes = 1.1;
+        console.log(cuotas_precio);
+    }
+    if(cuotas.value === '6'){
+        interes = 1.2; 
+        console.log(cuotas_precio);
+    }
+    cuotas_precio*=interes;
+    precio_Int = parseInt(cuotas_precio);
+}
+
+function crearOpcion(){
+    for(let i = 1; i<=6; i++){
+        if(i===1 || i%3 === 0){
+            let option = document.createElement("option");
+            if(i===1){
+                option.value = i;
+                option.innerText = i;
+            }
+            if(i===3){
+                option.value = i;
+                option.innerText=i;
+            }
+            if(i===6){
+                option.value = i;
+                option.innerText=i;
+            }
+        }
+    }
+}
+/*
 switch (banco) {
     case 1:
         for(let i = 1; i<=6; i++){
@@ -232,7 +315,7 @@ switch (banco) {
         console.log("NADA");
         break;
 }
-
+*/
      
 //Input Nombre//
 let inputName = document.querySelector("#inputNombre")
