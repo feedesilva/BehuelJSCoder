@@ -128,6 +128,7 @@ inputNum.addEventListener("keypress", (e)=>{
 let cuotas_precio = JSON.parse(localStorage.getItem("Precio"));
 let cuotas = document.querySelector("#inputCuotas");
 let eleccion;
+let interes = 1; 
     if(banco === visa){
         for(let i = 1; i<=6; i++){
             if(i===1 || i%3 === 0){
@@ -149,18 +150,20 @@ let eleccion;
         }
         cuotas.addEventListener("change", ()=>{
             console.log(cuotas.value);
+            cuotas_precio -= cuotas_precio*interes
             if(cuotas.value === '1'){
-                cuotas_precio = cuotas_precio*1;
+                interes = 1
                 console.log(cuotas_precio);
             }
             if(cuotas.value === '3'){
-                cuotas_precio = cuotas_precio*1.1;
+                interes = 1.1;
                 console.log(cuotas_precio);
             }
             if(cuotas.value === '6'){
-                cuotas_precio = cuotas_precio*1.2;
+                interes = 1.2; 
                 console.log(cuotas_precio);
             }
+            cuotas_precio*=interes;
             console.log(cuotas_precio);
             let precio_Int = parseInt(cuotas_precio);
             subtotal.innerHTML = '';
