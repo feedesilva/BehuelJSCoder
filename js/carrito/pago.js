@@ -126,11 +126,11 @@ inputNum.addEventListener("keypress", (e)=>{
     }
 }
 })
+let cuotas_precio = JSON.parse(localStorage.getItem("Precio"));
+let cuotas = document.querySelector("#inputCuotas");
+let eleccion;
+let interes = 1; 
 function calcularIntereses(){
-    let cuotas_precio = JSON.parse(localStorage.getItem("Precio"));
-    let cuotas = document.querySelector("#inputCuotas");
-    let eleccion;
-    let interes = 1; 
     createOptions();
     if(inputNum.value[0] ==4){
         cuotas.addEventListener("change", ()=>{
