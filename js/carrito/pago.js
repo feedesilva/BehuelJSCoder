@@ -75,7 +75,8 @@ let div_img = document.querySelector("#logo_marca");
 let card_number = document.querySelector("#number");
 let inputNum = document.querySelector("#inputNumero");
 let banco; 
-
+let visa;
+let master; 
 
 inputNum.addEventListener("keypress", (e)=>{
     mostrarFrente();
@@ -106,115 +107,29 @@ inputNum.addEventListener("keypress", (e)=>{
         div_img.innerHTML = '';
         const card_img = document.createElement("img");
         console.log("visa");
-        banco = 'visa'; 
+        banco = visa; 
         card_img.src = "../assets/visa.png";
         div_img.appendChild(card_img);
     }
   
+
     else{
     if(inputNum.value[0] == 3){
         div_img.innerHTML = ''; 
         const card_img = document.createElement("img");
         console.log("MASTER");
-        banco = 'master';
+        banco = master;
         card_img.src = "../assets/master.png";
         div_img.appendChild(card_img);
     }
 }
 })
-    console.log("El banco es ", banco);
 
 let cuotas_precio = JSON.parse(localStorage.getItem("Precio"));
 let cuotas = document.querySelector("#inputCuotas");
+let eleccion;
 let interes = 1; 
-let precioInt = 0;
-if(banco === 'visa'){
-    console.log("visa es entro");
-    crearOpcion();
-    cuotas.addEventListener("change", ()=>{
-        cuotas_precio = cuotas_precio/interes;
-        calculoInteresVisa();
-        subtotal.innerHTML = '';
-        subtotal.innerHTML = "El precio final es: $" + precio_Int;
-        console.log(subtotal);
-        div_precio.appendChild(subtotal);
-    })
-}
-if(banco === 'master'){
-    console.log("master es esntor");
-    crearOpcion();
-    cuotas.addEventListener("change", ()=>{
-        cuotas_precio = cuotas_precio/interes;
-        calculoPrecioMaster();
-        subtotal.innerHTML = '';
-        subtotal.innerHTML = "El precio final es: $" + precio_Int;
-        console.log(subtotal);
-        div_precio.appendChild(subtotal);
-    })
-}
-
-function calculoPrecioMaster(){
-    if(cuotas.value === '1'){
-        interes = 1
-        console.log(cuotas_precio);
-    }
-    if(cuotas.value === '3'){
-        interes = 1.2;
-        console.log(cuotas_precio);
-    }
-    if(cuotas.value === '6'){
-        interes = 1.5; 
-        console.log(cuotas_precio);
-    }
-    if(cuotas.value === '9'){
-        interes = 1.3; 
-        console.log(cuotas_precio);
-    }
-    cuotas_precio*=interes;
-    precio_Int = parseInt(cuotas_precio);
-}
-
-function calculoInteresVisa(){
-    if(cuotas.value === '1'){
-        interes = 1
-        console.log(cuotas_precio);
-    }
-    if(cuotas.value === '3'){
-        interes = 1.1;
-        console.log(cuotas_precio);
-    }
-    if(cuotas.value === '6'){
-        interes = 1.2; 
-        console.log(cuotas_precio);
-    }
-    cuotas_precio*=interes;
-    precio_Int = parseInt(cuotas_precio);
-}
-
-function crearOpcion(){
-    console.log("ocion");
-    for(let i = 1; i<=6; i++){
-        if(i===1 || i%3 === 0){
-            let option = document.createElement("option");
-            if(i===1){
-                option.value = i;
-                option.innerText = i;
-            }
-            if(i===3){
-                option.value = i;
-                option.innerText=i;
-            }
-            if(i===6){
-                option.value = i;
-                option.innerText=i;
-            }
-        }
-        cuotas.appendChild(option);
-    }
-}
-/*
-switch (banco) {
-    case 1:
+    if(banco === visa){
         for(let i = 1; i<=6; i++){
             if(i===1 || i%3 === 0){
                 let option = document.createElement("option");
@@ -236,7 +151,6 @@ switch (banco) {
         cuotas.addEventListener("change", ()=>{
             console.log(cuotas.value);
             cuotas_precio = cuotas_precio/interes
-            console.log(cuotas_precio);
             if(cuotas.value === '1'){
                 interes = 1
                 console.log(cuotas_precio);
@@ -257,67 +171,66 @@ switch (banco) {
             console.log(subtotal);
             div_precio.appendChild(subtotal);
         })
-        break;
-
-        case 2:
-            console.log("BANC MASTER");
-        for(let i = 1; i<=9; i++){
-            if(i===1 || i%3 === 0){
-                let option = document.createElement("option");
-                if(i===1){
-                    option.value = i;
-                    option.innerText = i;
+    }
+   
+/*
+    else{
+        if(banco === master){
+            for(let i = 1; i<=9; i++){
+                if(i===1 || i%3 === 0){
+                    let option = document.createElement("option");
+                    if(i===1){
+                        option.value = i;
+                        option.innerText=`${i} Sin interes`;
+                    }
+                    if(i===3){
+                        option.value = i;
+                        option.innerText=`${i} 10% interés`;
+                    }
+                    if(i===6){
+                        option.value = i;
+                        option.innerText=`${i} 20% interés`;
+                    }
+                    if(i===9){
+                        option.value = i;
+                        option.innerText=`${i} 30% interés`;
+                    }
+                    cuotas.appendChild(option);
+    
+                  
+                        if(option.value === 1){
+                            cuotas_precio = cuotas_precio * 1;
+                            console.log("Enrto en 1");
+                            cant_cuotas = i;
+                        }
+                        if(option.value === 3){
+                            cuotas_precio = cuotas_precio * 1.1;
+                            cant_cuotas = i;
+                            console.log("Enrto en 3");
+    
+                        }
+                        if(option.value === 6){
+                            cuotas_precio = cuotas_precio * 1.2;
+                            cant_cuotas = i;
+                            console.log("Enrto en 6");
+    
+                        }
+                        if(option.value === 9){
+                            cuotas_precio = cuotas_precio * 1.3;
+                            cant_cuotas = i;
+                            console.log("Enrto en 9");
+    
+                        }
+                 
                 }
-                if(i===3){
-                    option.value = i;
-                    option.innerText=i;
-                }
-                if(i===6){
-                    option.value = i;
-                    option.innerText=i;
-                }
-                if(i===9){
-                    console.log("9 cuotas");
-                    option.value = i;
-                    option.innerText=i;
-                }
-                cuotas.appendChild(option);
             }
+            
+            
         }
-        cuotas.addEventListener("change", ()=>{
-            console.log(cuotas.value);
-            cuotas_precio = cuotas_precio/interes;
-            console.log(cuotas_precio);
-            if(cuotas.value === '1'){
-                interes = 1
-                console.log(cuotas_precio);
-            }
-            if(cuotas.value === '3'){
-                interes = 1.2;
-                console.log(cuotas_precio);
-            }
-            if(cuotas.value === '6'){
-                interes = 1.5; 
-                console.log(cuotas_precio);
-            }
-            if(cuotas.value === '9'){
-                interes = 1.3; 
-                console.log(cuotas_precio);
-            }
-            cuotas_precio*=interes;
-            console.log(cuotas_precio);
-            let precio_Int = parseInt(cuotas_precio);
-            subtotal.innerHTML = '';
-            subtotal.innerHTML = "El precio final es: $" + precio_Int;
-            console.log(subtotal);
-            div_precio.appendChild(subtotal);
-        })
-    default:
-        console.log("NADA");
-        break;
-}
-*/
-     
+    }
+    */
+   
+
 //Input Nombre//
 let inputName = document.querySelector("#inputNombre")
 inputName.addEventListener("keypress", (e)=>{
