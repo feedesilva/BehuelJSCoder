@@ -175,6 +175,7 @@ let interes = 1;
     }
 else{
         if(banco === master){
+            console.log("BANC MASTER");
         for(let i = 1; i<=9; i++){
             if(i===1 || i%3 === 0){
                 let option = document.createElement("option");
