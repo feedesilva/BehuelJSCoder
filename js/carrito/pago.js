@@ -106,7 +106,7 @@ inputNum.addEventListener("keypress", (e)=>{
         div_img.innerHTML = '';
         const card_img = document.createElement("img");
         console.log("visa");
-        banco = 'visa'; 
+        banco = 1; 
         card_img.src = "../assets/visa.png";
         div_img.appendChild(card_img);
     }
@@ -117,7 +117,7 @@ inputNum.addEventListener("keypress", (e)=>{
         div_img.innerHTML = ''; 
         const card_img = document.createElement("img");
         console.log("MASTER");
-        banco = 'master';
+        banco = 2;
         card_img.src = "../assets/master.png";
         div_img.appendChild(card_img);
     }
@@ -130,7 +130,7 @@ let cuotas = document.querySelector("#inputCuotas");
 let eleccion;
 let interes = 1; 
 switch (banco) {
-    case 'visa':
+    case 1:
         for(let i = 1; i<=6; i++){
             if(i===1 || i%3 === 0){
                 let option = document.createElement("option");
@@ -175,7 +175,7 @@ switch (banco) {
         })
         break;
 
-        case 'master':
+        case 2:
             console.log("BANC MASTER");
         for(let i = 1; i<=9; i++){
             if(i===1 || i%3 === 0){
@@ -229,6 +229,7 @@ switch (banco) {
             div_precio.appendChild(subtotal);
         })
     default:
+        console.log("NADA");
         break;
 }
 
