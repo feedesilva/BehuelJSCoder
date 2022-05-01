@@ -207,11 +207,11 @@ else{
                 console.log(cuotas_precio);
             }
             if(cuotas.value === '3'){
-                interes = 1.1;
+                interes = 1.2;
                 console.log(cuotas_precio);
             }
             if(cuotas.value === '6'){
-                interes = 1.2; 
+                interes = 1.5; 
                 console.log(cuotas_precio);
             }
             if(cuotas.value === '9'){
