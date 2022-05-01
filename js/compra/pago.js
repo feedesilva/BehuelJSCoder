@@ -263,7 +263,7 @@ send.addEventListener("click", () => {
         icon: "success",
         confirmButtonText: "Genial",
     })*/
-    location = "envio.js";
+    location = "./envio.js";
 })
 
 
