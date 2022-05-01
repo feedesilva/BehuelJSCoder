@@ -190,6 +190,7 @@ function calculoInteresVisa(){
 }
 
 function crearOpcion(){
+    console.log("ocion");
     for(let i = 1; i<=6; i++){
         if(i===1 || i%3 === 0){
             let option = document.createElement("option");
