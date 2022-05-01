@@ -130,8 +130,10 @@ let cuotas_precio = JSON.parse(localStorage.getItem("Precio"));
 let cuotas = document.querySelector("#inputCuotas");
 let eleccion;
 let interes = 1; 
+let exist = 0;
 function calcularIntereses(){
     if(inputNum.value[0] ==4){
+        if(exist === 0)
         createOptions();
         cuotas.addEventListener("change", ()=>{
             interesVisa();
@@ -139,6 +141,7 @@ function calcularIntereses(){
     }
     else{
         if(inputNum.value[0] == 3){
+            if(exist === 0)
             createOptions();
             cuotas.addEventListener("change", ()=>{
                 interesMaster();
@@ -147,6 +150,7 @@ function calcularIntereses(){
     }
 }
 function createOptions(){
+    exist = 1;
     for(let i = 1; i<=6; i++){
         if(i===1 || i%3 === 0){
             let option = document.createElement("option");
