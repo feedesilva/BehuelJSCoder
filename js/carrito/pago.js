@@ -137,13 +137,14 @@ function calcularIntereses(){
             interesVisa();
         })
     }
-    /*
-    if(inputNum.value[0] == 3){
-        cuotas.addEventListener("change", ()=>{
-            interesMaster();
-        })
+    else{
+        if(inputNum.value[0] == 3){
+            createOptions();
+            cuotas.addEventListener("change", ()=>{
+                interesMaster();
+            })
+        }
     }
-    */
 }
 function createOptions(){
     for(let i = 1; i<=6; i++){
@@ -178,6 +179,29 @@ function interesVisa(){
             }
             if(cuotas.value === '6'){
                 interes = 1.2; 
+                console.log(cuotas_precio);
+            }
+            cuotas_precio*=interes;
+            console.log(cuotas_precio);
+            let precio_Int = parseInt(cuotas_precio);
+            subtotal.innerHTML = '';
+            subtotal.innerHTML = "El precio final es: $" + precio_Int;
+            console.log(subtotal);
+            div_precio.appendChild(subtotal);
+}
+
+function interesMaster(){
+    cuotas_precio = cuotas_precio/interes
+            if(cuotas.value === '1'){
+                interes = 1
+                console.log(cuotas_precio);
+            }
+            if(cuotas.value === '3'){
+                interes = 1.2;
+                console.log(cuotas_precio);
+            }
+            if(cuotas.value === '6'){
+                interes = 1.3; 
                 console.log(cuotas_precio);
             }
             cuotas_precio*=interes;
