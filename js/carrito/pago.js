@@ -111,7 +111,6 @@ inputNum.addEventListener("keypress", (e)=>{
         div_img.appendChild(card_img);
     }
   
-
     else{
     if(inputNum.value[0] == 3){
         div_img.innerHTML = ''; 
@@ -131,7 +130,6 @@ let interes = 1;
 let precioInt = 0;
 if(banco === 1){
     crearOpcion();
-    cuotas.appendChild(option);
     cuotas.addEventListener("change", ()=>{
         cuotas_precio = cuotas_precio/interes;
         calculoInteresVisa();
@@ -143,7 +141,6 @@ if(banco === 1){
 }
 if(banco === 2){
     crearOpcion();
-    cuotas.appendChild(option);
     cuotas.addEventListener("change", ()=>{
         cuotas_precio = cuotas_precio/interes;
         calculoPrecioMaster();
@@ -209,6 +206,7 @@ function crearOpcion(){
                 option.innerText=i;
             }
         }
+        cuotas.appendChild(option);
     }
 }
 /*
