@@ -259,11 +259,7 @@ let container_all = document.querySelector("#contenedor")
 let send = document.querySelector("#btn_enviar");
 send.addEventListener("click", () => {
     location = "./envio.html";
-    Swal.fire({
-        title: "Compra procesada",
-        icon: "success",
-        confirmButtonText: "Genial",
-    })
+  
 })
 
 
