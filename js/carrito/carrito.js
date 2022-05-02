@@ -124,7 +124,7 @@ function refreshShopp(){
   prods.forEach(product => {
     const {img,nombre, precio} = product// Desestructuracion
     let nodoLi = document.createElement("div");
-    nodoLi.innerHTML = `${img}  ${nombre} - ${precio}  <br>` ;
+    nodoLi.innerHTML = `${img.src}  ${nombre} - ${precio}  <br>` ;
   
     newContainer.appendChild(nodoLi);
   })
