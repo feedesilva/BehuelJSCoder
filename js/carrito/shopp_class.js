@@ -12,18 +12,18 @@ class Tienda{
       // map => [{cantidad:1, producto}] = [producto]
       let mapped= this.productos.map(element=>element.producto);
       
-      let enCarrito = mapped.find(element=>element.id===producto.id);
+      let enCarrito = mapped.find(element=>element.nombre===producto.nombre);
 
       if(!enCarrito){
           this.productos.push({cantidad:1, producto});
       }  
       else{
           // [producto] => [id]
-          let indexed = mapped.map(element=>element.id);
+          let indexed = mapped.map(element=>element.nombre);
           // [1,2,3,4,5,6] => indexOf(6) => 5
           // ["perro", "gato", "paloma"] =>indexOf("gato") => 1
           // [{id:1, nombre:"hola"}, {id:2, nombre:"bola"}] => indexOf({id:2, nombre:"bola"}) =>-1
-          let index = indexed.indexOf(producto.id);
+          let index = indexed.indexOf(producto.nombre);
           this.productos[index].cantidad+=1;
       }  
     }    
