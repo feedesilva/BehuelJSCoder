@@ -11,7 +11,7 @@ class Tienda{
       let mapear = this.productos.map(element => element.producto);
       let enStock = this.productos.find (element => element.id === producto.id);
       if(enStock){
-        let indexed = mapear.ma(element => element.id);
+        let indexed = mapear.map(element => element.id);
         let index = indexed.indexOf(producto.id);
         this.productos[index].cantidad+=1;
       }
