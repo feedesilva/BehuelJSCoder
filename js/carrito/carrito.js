@@ -113,10 +113,12 @@ function addtoShopp(idProduct){
   // refreshShopp();
 }
 
-const template = document.querySelector("#template-carrito").content;
-const fragment = document.createDocumentFragment();
+
 const items = document.querySelector("#items");
 function pintarCarrito(){
+  items.innerHTML = '';
+  const template = document.querySelector("#template-carrito").content;
+  const fragment = document.createDocumentFragment();
   Object.values(tienda).forEach(producto => {
     console.log(producto);
     template.querySelector('th').textcontent = producto.id;
