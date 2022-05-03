@@ -1,6 +1,7 @@
 [ 
     {
         "id":1,
+        "cantidad": 1,
         "nombre": "Marroc",
         "precio": 100,
         "img": "../assets/marroc_1.jpg",
@@ -8,6 +9,7 @@
     },
     {
         "id":2,
+        "cantidad": 1,
         "nombre": "Cookies",
         "precio": 200,
         "img": "../assets/cookies_2.jpg",
@@ -15,6 +17,7 @@
     },
     {
         "id":3,
+        "cantidad": 1,
         "nombre": "Red Velvet",
         "precio": 300,
         "img": "../assets/red_velvet.jpg",
@@ -22,6 +25,7 @@
     },
     {
         "id":4,
+        "cantidad": 1,
         "nombre": "Oreo cookies",
         "precio": 400,
         "img": "../assets/oreo.jpg",
@@ -29,6 +33,7 @@
     },
     {
         "id":5,
+        "cantidad": 1,
         "nombre":"Bombones rellenos",
         "precio": 500,
         "img": "../assets/bombones_2.jpg",
