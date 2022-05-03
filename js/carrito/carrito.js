@@ -129,7 +129,7 @@ function pintarCarrito(){
     // const clone = template.cloneNode(true)
     // fragment.appendChild(clone)
   })
-  // items.appendChild(fragment)
+  items.appendChild(template)
 }
 /*
 //REVISAR///
