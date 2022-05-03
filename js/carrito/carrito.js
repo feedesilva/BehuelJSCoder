@@ -100,7 +100,8 @@ function addtoShopp(idProduct){
   let index = products.findIndex(el=>el===idProduct);
   let product = stockProductos[index];
   product.cantidad = 1;
-  if(tienda.hasOwnProperty(product.id)){
+  //Verifico si el producto ya existe en el carrito
+  if(tienda.hasOwnProperty(product.id)){ 
     product.cantidad++;
   }
   tienda[product.id] = {...product};
@@ -116,7 +117,7 @@ function addtoShopp(idProduct){
       borderRadius: "10px",
     }
   }).showToast();
-  //tienda.addProducto(product);
+  tienda.addProducto(product);
   refreshShopp();
 }
 

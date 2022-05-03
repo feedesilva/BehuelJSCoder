@@ -8,12 +8,7 @@ class Tienda{
 
     addProducto(producto)
     { 
-      
-      if (tienda.hasOwnProperty(producto)){
-        console.log("existe");
-      }
-      console.log(producto);
-    this.productos.push(producto)  
+      this.productos.push(producto)  
     }
 
    //Guardo los datos en el almacenamietno local//
