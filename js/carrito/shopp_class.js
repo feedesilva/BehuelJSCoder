@@ -8,16 +8,16 @@ class Tienda{
 
     addProducto(producto)
     { 
-
+      //Verifico si el producto ya existe en el carrito
       if(!tienda.hasOwnProperty(producto.id)){
         producto.cantidad = 1;
       }
       else{
         producto.cantidad++;
-    console.log("La cantidad es: " + producto.cantidad);
       }
       tienda[producto.id] = {...producto};
-      this.productos.push(producto)  
+      this.productos.push(producto);
+      localStorage.setItem("Carrito", JSON.stringify(this.productos));
     }
 
    //Guardo los datos en el almacenamietno local//

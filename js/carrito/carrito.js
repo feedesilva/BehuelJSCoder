@@ -98,9 +98,7 @@ function addtoShopp(idProduct){
   let products = stockProductos.map(el=>el.id);
   let index = products.findIndex(el=>el===idProduct);
   let product = stockProductos[index];
-  //Verifico si el producto ya existe en el carrito
-
-
+ 
   console.log(tienda);
   //TOASTIFY//  
   Toastify({
@@ -125,14 +123,10 @@ function refreshShopp(){
   let newContainer = document.createElement("div");
   newContainer.setAttribute("style", "display:flex; flex-flow: column wrap");
   prods.forEach(product => {
+    const view_shopp = JSON.parse(localStorage.getItem("Carrito"));
     const {nombre, precio} = product// Desestructuracion
     let nodoLi = document.createElement("div");
-    if(product.nombre){
-    nodoLi.innerText = `${product.cantidad} - ${nombre} - ${precio}  <br>`;
-    }
-    else{
-      nodoLi.innerText = `1 - ${nombre} - ${precio}  <br>`;
-    }
+    nodoLi.innerHTML = view_shopp;
     newContainer.appendChild(nodoLi);
   })
   container.appendChild(newContainer);
