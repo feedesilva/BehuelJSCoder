@@ -124,7 +124,7 @@ function refreshShopp(){
     const view_shopp = JSON.parse(localStorage.getItem("Carrito"));
     // const {cantidad, nombre, precio} = product// Desestructuracion
     let nodoLi = document.createElement("div");
-    nodoLi.innerHTML = view_shopp;
+    nodoLi.innerHTML = `${view_shopp}`;
     // nodoLi.innerHTML = "";
     // nodoLi.innerHTML = `<br>${cantidad} - ${nombre} - ${precio}   <br> `;
     newContainer.appendChild(nodoLi);
