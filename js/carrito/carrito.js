@@ -103,6 +103,7 @@ function addtoShopp(idProduct){
   //Verifico si el producto ya existe en el carrito
   if(tienda.hasOwnProperty(product.id)){ 
     product.cantidad++;
+    console.log(product_cantidad);
     existe = 1;
   }
   tienda[product.id] = {...product};
