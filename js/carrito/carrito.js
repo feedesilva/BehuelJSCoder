@@ -95,6 +95,7 @@ function btn_prod(prod){
   return `<button class="comprar btn-primary btn" onclick="addtoShopp (${prod.id})">Agregar al Carrito</button>`
 }
 let existe = 0;
+product.cantidad = 1;
 function addtoShopp(idProduct){
   let products = stockProductos.map(el=>el.id);
   let index = products.findIndex(el=>el===idProduct);
