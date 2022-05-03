@@ -124,9 +124,9 @@ function refreshShopp(){
   newContainer.setAttribute("style", "display:flex; flex-flow: column wrap");
   prods.forEach(product => {
     const view_shopp = JSON.parse(localStorage.getItem("Carrito"));
-    const {nombre, precio} = product// Desestructuracion
+    const {nombre, precio} = view_shopp// Desestructuracion
     let nodoLi = document.createElement("div");
-    nodoLi.innerText = view_shopp;
+    nodoLi.innerText = `${nombre} - ${precio}`;
     newContainer.appendChild(nodoLi);
   })
   container.appendChild(newContainer);
