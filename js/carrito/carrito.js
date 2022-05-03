@@ -125,10 +125,10 @@ function refreshShopp(){
     if(view_shopp){
       newContainer.innerHTML = "";
     }
-    // const {cantidad, nombre, precio} = product// Desestructuracion
+    const {cantidad, nombre, precio} = product// Desestructuracion
     let nodoLi = document.createElement("div");
     nodoLi.innerHTML = "";
-    nodoLi.innerHTML = `${view_shopp}  <br> `;
+    nodoLi.innerHTML = `${view_shopp} <br> ${cantidad} - ${nombre} - ${precio}   <br> `;
     newContainer.appendChild(nodoLi);
   })
   container.appendChild(newContainer);
