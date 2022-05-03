@@ -126,10 +126,10 @@ function pintarCarrito(){
     template.querySelectorAll('td')[1].innerText = producto.cantidad;
     template.querySelector('span').innerText =producto.precio;
 
-    const clone = template.cloneNode(true)
-    fragment.appendChild(clone)
+    // const clone = template.cloneNode(true)
+    // fragment.appendChild(clone)
   })
-  items.appendChild(fragment)
+  // items.appendChild(fragment)
 }
 /*
 //REVISAR///
