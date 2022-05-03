@@ -14,7 +14,6 @@ class Tienda{
       }
       else{
         producto.cantidad++;
-    console.log("LO HICE");
     console.log("La cantidad es: " + producto.cantidad);
       }
       tienda[producto.id] = {...producto};
