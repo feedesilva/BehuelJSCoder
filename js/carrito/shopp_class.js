@@ -8,7 +8,7 @@ class Tienda{
 
     addProducto(producto)
     { 
-      producto.cantidad = 1;
+
       if(tienda.hasOwnProperty(producto.id)){
         producto.cantidad++;
     console.log("LO HICE");
