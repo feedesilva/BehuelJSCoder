@@ -121,11 +121,12 @@ function pintarCarrito(){
   const fragment = document.createDocumentFragment();
   Object.values(tienda).forEach(producto => {
     console.log(producto);
+    console.log("LOL");
+
     template.querySelector('th').innerHTML = `${producto.id}`;
     template.querySelectorAll('td')[0].innerHTML = `${producto.nombre}`;
     template.querySelectorAll('td')[1].innerHTML = `${producto.cantidad}`;
     template.querySelector('span').innerHTML =`${producto.precio}`;
-console.log("LOL");
      const clone = template.cloneNode(true)
      fragment.appendChild(clone)
   })
