@@ -119,7 +119,6 @@ function pintarCarrito(){
   items.innerHTML = '';
   const template = document.querySelector("#template-carrito").content;
   const fragment = document.createDocumentFragment();
-  let clone;
   Object.values(tienda).forEach(producto => {
     console.log(producto);
     template.querySelector('th').innerText = producto.id;
@@ -127,10 +126,10 @@ function pintarCarrito(){
     template.querySelectorAll('td')[1].innerText = producto.cantidad;
     template.querySelector('span').innerText =producto.precio;
 
-     clone = template.cloneNode(true)
-    // fragment.appendChild(clone)
+     const clone = template.cloneNode(true)
+     fragment.appendChild(clone)
   })
-  items.appendChild(clone)
+  items.appendChild(fragment)
 }
 /*
 //REVISAR///
