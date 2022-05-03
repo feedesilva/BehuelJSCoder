@@ -17,8 +17,8 @@ class Tienda{
     console.log("LO HICE");
     console.log("La cantidad es: " + producto.cantidad);
       }
-      
-  tienda[producto.id] = {...producto};
+      tienda[producto.id] = {...producto};
+      this.productos.push(producto)  
     }
 
    //Guardo los datos en el almacenamietno local//
