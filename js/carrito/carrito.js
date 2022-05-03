@@ -94,19 +94,17 @@ function product_information(product){
 function btn_prod(prod){  
   return `<button class="comprar btn-primary btn" onclick="addtoShopp (${prod.id})">Agregar al Carrito</button>`
 }
-let existe = 0;
 function addtoShopp(idProduct){
   let products = stockProductos.map(el=>el.id);
   let index = products.findIndex(el=>el===idProduct);
   let product = stockProductos[index];
-  if(!product.cantidad){
+  if(product.cantidad === isNaN){
     product.cantidad = 1;
   }
   //Verifico si el producto ya existe en el carrito
  { if(tienda.hasOwnProperty(product.id)){ 
     product.cantidad++;
     console.log("La cantidad es: " + product.cantidad);
-    existe = 1;
   }else{
   tienda[product.id] = {...product};
   }}
@@ -136,13 +134,7 @@ function refreshShopp(){
   prods.forEach(product => {
     const {nombre, precio} = product// Desestructuracion
     let nodoLi = document.createElement("div");
-    if(existe === 0){
-      nodoLi.innerHTML = `${nombre} - ${precio}  <br>`;
-    }
-    else{
-      nodoLi.innerHTML = `${product.cantidad} - ${nombre} - ${precio} <br>`;
-    }
-  
+    nodoLi.innerHTML = `${nombre} - ${precio}  <br>`;
     newContainer.appendChild(nodoLi);
   })
   container.appendChild(newContainer);
