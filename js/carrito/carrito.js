@@ -121,11 +121,13 @@ function refreshShopp(){
   let newContainer = document.createElement("div");
   newContainer.setAttribute("style", "display:flex; flex-flow: column wrap");
   prods.forEach(product => {
-    newContainer.innerHTML = ""
-    const view_shopp = JSON.parse(localStorage.getItem("Carrito"));
+    
     const {cantidad, nombre, precio} = product// Desestructuracion
     let nodoLi = document.createElement("div");
     nodoLi.innerHTML = "";
+    if(nombre){
+      newContainer.innerHTML = ""
+    }
     nodoLi.innerHTML = `${cantidad} - ${nombre} - ${precio}  <br> `;
     newContainer.appendChild(nodoLi);
   })
