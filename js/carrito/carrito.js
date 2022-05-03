@@ -126,8 +126,7 @@ function pintarCarrito(){
     // template.querySelectorAll('td')[1].innerHTML = producto.cantidad;
     // template.querySelector('span').innerHTML =producto.precio;
 
-     const clone = template.cloneNode(true)
-     fragment.appendChild(clone)
+     fragment.appendChild(template)
   })
   items.appendChild(fragment)
 }
