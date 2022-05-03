@@ -118,6 +118,7 @@ const fragment = document.createDocumentFragment();
 const items = document.querySelector("#items");
 function pintarCarrito(){
   Object.values(tienda).forEach(producto => {
+    console.log(producto.cantidad);
     console.log(producto);
     template.querySelector('th').textcontent = producto.id;
     template.querySelectorAll('td')[0].textcontent = producto.nombre
