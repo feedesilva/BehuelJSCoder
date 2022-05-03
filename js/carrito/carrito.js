@@ -91,7 +91,7 @@ function product_information(product){
           </div>`
 }
 
-function btn_prod(prod){
+function btn_prod(prod){  
   return `<button class="comprar btn-primary btn" onclick="addtoShopp (${prod.id})">Agregar al Carrito</button>`
 }
 
@@ -122,9 +122,9 @@ function refreshShopp(){
   let newContainer = document.createElement("div");
   newContainer.setAttribute("style", "display:flex; flex-flow: column wrap");
   prods.forEach(product => {
-    const {img,nombre, precio} = product// Desestructuracion
+    const {nombre, precio} = product// Desestructuracion
     let nodoLi = document.createElement("div");
-    nodoLi.innerHTML = `${img.src}  ${nombre} - ${precio}  <br>` ;
+    nodoLi.innerHTML = `${nombre} - ${precio}  <br>` ;
   
     newContainer.appendChild(nodoLi);
   })
