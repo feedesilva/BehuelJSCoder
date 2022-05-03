@@ -117,10 +117,10 @@ function addtoShopp(idProduct){
 function refreshShopp(){
   let container = document.querySelector("#shopp");
   container.innerHTML="";
-  let prods = tienda.productos;
+  //let prods = tienda.productos;
   let newContainer = document.createElement("div");
   newContainer.setAttribute("style", "display:flex; flex-flow: column wrap");
-  prods.forEach(product => {
+  // prods.forEach(product => {
     const view_shopp = JSON.parse(localStorage.getItem("Carrito"));
     // const {cantidad, nombre, precio} = product// Desestructuracion
     let nodoLi = document.createElement("div");
@@ -128,7 +128,7 @@ function refreshShopp(){
     // nodoLi.innerHTML = "";
     // nodoLi.innerHTML = `<br>${cantidad} - ${nombre} - ${precio}   <br> `;
     newContainer.appendChild(nodoLi);
-  })
+//})
   container.appendChild(newContainer);
 
   tienda.save();
