@@ -121,7 +121,6 @@ function addtoShopp(idProduct){
   }).showToast();
   tienda.addProducto(product);
   refreshShopp();
-  product.cantidad=1;
 }
 
 
