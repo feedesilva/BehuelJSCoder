@@ -17,6 +17,7 @@ class Tienda{
       }
       tienda[producto.id] = {...producto};
       this.productos.push(producto);
+      localStorage.setItem("Carrito", JSON.stringify(this.productos));
     }
 
    //Guardo los datos en el almacenamietno local//
