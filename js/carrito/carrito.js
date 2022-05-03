@@ -115,7 +115,7 @@ function addtoShopp(idProduct){
 
 const items = document.querySelector("#items");
 function pintarCarrito(){
-  console.log(Object.values(tienda));
+  console.log("ver " + tienda);
 }
 
 //REVISAR///
