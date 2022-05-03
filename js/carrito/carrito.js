@@ -122,9 +122,9 @@ function refreshShopp(){
   newContainer.setAttribute("style", "display:flex; flex-flow: column wrap");
   prods.forEach(product => {
     const view_shopp = JSON.parse(localStorage.getItem("Carrito"));
-    if(view_shopp){
-      newContainer.innerHTML = "";
-    }
+    // if(view_shopp){
+    //   newContainer.innerHTML = "";
+    // }
     const {cantidad, nombre, precio} = product// Desestructuracion
     let nodoLi = document.createElement("div");
     nodoLi.innerHTML = "";
