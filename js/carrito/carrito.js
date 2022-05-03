@@ -105,7 +105,7 @@ function addtoShopp(idProduct){
     product.cantidad++;
     console.log("La cantidad es: " + product.cantidad);
     existe = 1;
-  }else{
+  }else{product.cantidad;
   tienda[product.id] = {...product};
   }
   console.log(tienda);
