@@ -99,14 +99,18 @@ function addtoShopp(idProduct){
   let index = products.findIndex(el=>el===idProduct);
   let product = stockProductos[index];
   //Verifico si el producto ya existe en el carrito
- { if(tienda.hasOwnProperty(product.id)){ 
+  if(tienda.hasOwnProperty(product.id)){ 
+    if(product.cantidad<=1 || !product.cantidad){
+      product.cantidad = 1; 
+    }
+    else{
     product.cantidad++;
+    console.log("LO HICE");
+    }
     console.log("La cantidad es: " + product.cantidad);
-  }else{
+  }
   tienda[product.id] = {...product};
-  product.cantidad = 1; 
 
-  }}
   console.log(tienda);
   //TOASTIFY//  
   Toastify({
