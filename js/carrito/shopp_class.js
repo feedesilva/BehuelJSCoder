@@ -8,6 +8,7 @@ class Tienda{
 
     addProducto(producto)
     { 
+      
       if (tienda.hasOwnProperty(producto)){
         console.log("existe");
       }
