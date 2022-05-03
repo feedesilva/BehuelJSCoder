@@ -8,7 +8,7 @@ class Tienda{
 
     addProducto(producto)
     { 
-      if (data.hasOwnProperty(producto)){
+      if (tienda.hasOwnProperty(producto)){
         console.log("existe");
       }
       console.log(producto);
