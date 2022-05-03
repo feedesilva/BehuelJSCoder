@@ -8,7 +8,14 @@ class Tienda{
 
     addProducto(producto)
     { 
-      this.productos.push(producto)  
+      producto.cantidad = 1;
+      if(tienda.hasOwnProperty(producto.id)){
+        producto.cantidad++;
+    console.log("LO HICE");
+    console.log("La cantidad es: " + producto.cantidad);
+      }
+      
+  tienda[product.id] = {...product};
     }
 
    //Guardo los datos en el almacenamietno local//
