@@ -127,7 +127,8 @@ function refreshShopp(){
     const {nombre, precio} = product// Desestructuracion
     let nodoLi = document.createElement("div");
     if(view_shopp){
-    nodoLi.innerText = `${product.cantidad} - ${nombre} - ${precio}  <br> `;
+      nodoLi.innerHTML = '';
+      nodoLi.innerHTML = `${product.cantidad} - ${nombre} - ${precio}  <br> `;
     }
     else{
       nodoLi.innerText = `1 - ${nombre} - ${precio}`;
