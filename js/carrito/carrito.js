@@ -113,11 +113,21 @@ function addtoShopp(idProduct){
   refreshShopp();
 }
 
+const template = document.querySelector("#template-carrito").content;
+const fragment = document.createDocumentFragment();
 const items = document.querySelector("#items");
 function pintarCarrito(){
   Object.values(tienda).forEach(producto => {
     console.log(producto);
+    template.querySelector('th').textcontent = producto.id;
+    template.querySelectorAll('td')[0].textcontent = producto.nombre
+    template.querySelectorAll('td')[1].textcontent = producto.cantidad
+    template.querySelector('span').textcontent = producto.precio
+
+    const clone = template.cloneNode(true)
+    fragment.appendChild(clone)
   })
+  items.appendChild(fragment)
 }
 
 //REVISAR///
