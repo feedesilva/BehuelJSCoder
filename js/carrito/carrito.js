@@ -113,6 +113,11 @@ function addtoShopp(idProduct){
   refreshShopp();
 }
 
+const items = document.querySelector("#items");
+function pintarCarrito(){
+  console.log(Object.values(tienda));
+}
+
 //REVISAR///
 function refreshShopp(){
   let container = document.querySelector("#shopp");
