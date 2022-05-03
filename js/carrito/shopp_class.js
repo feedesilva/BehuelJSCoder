@@ -7,14 +7,8 @@ class Tienda{
     //llega el producto encontrado en addtoshopp
 
     addProducto(producto)
-    {  if(tienda.hasOwnProperty(producto.id)){ 
-      producto.cantidad++;
-      console.log("La cantidad es: " + producto.cantidad);
-      existe = 1;
-    }else{
-    tienda[producto.id] = {...producto};
-    }
-      // this.productos.push(producto)  
+    { 
+      this.productos.push(producto)  
     }
 
    //Guardo los datos en el almacenamietno local//

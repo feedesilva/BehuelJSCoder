@@ -100,13 +100,13 @@ function addtoShopp(idProduct){
   let index = products.findIndex(el=>el===idProduct);
   let product = stockProductos[index];
   //Verifico si el producto ya existe en el carrito
-//  { if(tienda.hasOwnProperty(product.id)){ 
-//     product.cantidad++;
-//     console.log("La cantidad es: " + product.cantidad);
-//     existe = 1;
-//   }else{
-//   tienda[product.id] = {...product};
-//   }}
+ { if(tienda.hasOwnProperty(product.id)){ 
+    product.cantidad++;
+    console.log("La cantidad es: " + product.cantidad);
+    existe = 1;
+  }else{
+  tienda[product.id] = {...product};
+  }}
   console.log(tienda);
   //TOASTIFY//  
   Toastify({
@@ -121,6 +121,7 @@ function addtoShopp(idProduct){
   }).showToast();
   tienda.addProducto(product);
   refreshShopp();
+  product.cantidad=1;
 }
 
 
