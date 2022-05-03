@@ -105,8 +105,9 @@ function addtoShopp(idProduct){
     product.cantidad++;
     console.log("La cantidad es: " + product.cantidad);
     existe = 1;
-  }
+  }else{
   tienda[product.id] = {...product};
+  }
   console.log(tienda);
   //TOASTIFY//  
   Toastify({
