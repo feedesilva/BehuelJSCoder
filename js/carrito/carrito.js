@@ -113,7 +113,7 @@ function addtoShopp(idProduct){
   refreshShopp();
 }
 
-
+//REVISAR///
 function refreshShopp(){
   let container = document.querySelector("#shopp");
   container.innerHTML="";
