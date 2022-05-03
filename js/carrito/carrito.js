@@ -98,16 +98,12 @@ function addtoShopp(idProduct){
   let products = stockProductos.map(el=>el.id);
   let index = products.findIndex(el=>el===idProduct);
   let product = stockProductos[index];
+  let cantidad = product.cantidad;
   //Verifico si el producto ya existe en el carrito
   if(tienda.hasOwnProperty(product.id)){ 
-    if(product.cantidad<=1 || !product.cantidad){
-      product.cantidad = 1; 
-    }
-    else{
-    product.cantidad++;
+    cantidad++;
     console.log("LO HICE");
-    }
-    console.log("La cantidad es: " + product.cantidad);
+    console.log("La cantidad es: " + cantidad);
   }
   tienda[product.id] = {...product};
 
