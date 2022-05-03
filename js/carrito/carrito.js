@@ -94,7 +94,7 @@ function product_information(product){
 function btn_prod(prod){  
   return `<button class="comprar btn-primary btn" onclick="addtoShopp (${prod.id})">Agregar al Carrito</button>`
 }
-
+let existe = 0;
 function addtoShopp(idProduct){
   let products = stockProductos.map(el=>el.id);
   let index = products.findIndex(el=>el===idProduct);
@@ -103,6 +103,7 @@ function addtoShopp(idProduct){
   //Verifico si el producto ya existe en el carrito
   if(tienda.hasOwnProperty(product.id)){ 
     product.cantidad++;
+    existe = 1;
   }
   tienda[product.id] = {...product};
   console.log(tienda);
@@ -130,7 +131,12 @@ function refreshShopp(){
   prods.forEach(product => {
     const {nombre, precio} = product// Desestructuracion
     let nodoLi = document.createElement("div");
-    nodoLi.innerHTML = `${nombre} - ${precio}  <br>` ;
+    if(existe === 0){
+      nodoLi.innerHTML = `${nombre} - ${precio}  <br>`;
+    }
+    else{
+      nodoLi.innerHTML = `${product.cantidad} - ${nombre} - ${precio} <br>`;
+    }
   
     newContainer.appendChild(nodoLi);
   })
