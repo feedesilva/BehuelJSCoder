@@ -100,7 +100,7 @@ function addtoShopp(idProduct){
   let index = products.findIndex(el=>el===idProduct);
   let product = stockProductos[index];
   if(tienda.hasOwnProperty(product.id)){
-
+    console.log("existe");
   }
   tienda[product.id] = {...product};
   console.log(tienda);
