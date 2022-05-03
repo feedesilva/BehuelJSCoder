@@ -110,7 +110,7 @@ function addtoShopp(idProduct){
     }
   }).showToast();
   tienda.addProducto(product);
-  // refreshShopp();
+  refreshShopp();
 }
 
 /*
