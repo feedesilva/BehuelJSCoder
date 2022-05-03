@@ -113,6 +113,7 @@ function addtoShopp(idProduct){
   // refreshShopp();
 }
 
+/*
 
 const items = document.querySelector("#items");
 function pintarCarrito(){
@@ -120,16 +121,20 @@ function pintarCarrito(){
   const template = document.querySelector("#template-carrito").content;
   const fragment = document.createDocumentFragment();
   Object.values(tienda).forEach(producto => {
-    template.querySelector('th').textContent = producto.id;
-    template.querySelectorAll('td')[0].textContent =producto.nombre;
-    template.querySelectorAll('td')[1].textContent = producto.cantidad;
-    template.querySelector('span').textContent = producto.precio;
+    console.log(producto);
+    console.log("LOL");
+
+    template.querySelector('th').innerHTML = `${producto.id}`;
+    template.querySelectorAll('td')[0].innerHTML = `${producto.nombre}`;
+    template.querySelectorAll('td')[1].innerHTML = `${producto.cantidad}`;
+    template.querySelector('span').innerHTML =`${producto.precio}`;
      const clone = template.cloneNode(true)
      fragment.appendChild(clone)
   })
   items.appendChild(fragment)
 }
-/*
+*/
+
 //REVISAR///
 function refreshShopp(){
   let container = document.querySelector("#shopp");
@@ -184,7 +189,7 @@ function refreshShopp(){
   btn_div.appendChild(buy_btn);
   btn_div.appendChild(reset_btn); 
 }
-*/
+
 function product_filter(idgroup){
   return  stockProductos.filter(stockProductos=>stockProductos.categoria_producto===idgroup);
 }
