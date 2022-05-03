@@ -131,7 +131,7 @@ function pintarCarrito(){
   })
   items.appendChild(fragment)
 }
-
+/*
 //REVISAR///
 function refreshShopp(){
   let container = document.querySelector("#shopp");
@@ -184,11 +184,9 @@ function refreshShopp(){
   })
   newContainer.appendChild(btn_div);
   btn_div.appendChild(buy_btn);
-  btn_div.appendChild(reset_btn);
-
-  
+  btn_div.appendChild(reset_btn); 
 }
-
+*/
 function product_filter(idgroup){
   return  stockProductos.filter(stockProductos=>stockProductos.categoria_producto===idgroup);
 }
