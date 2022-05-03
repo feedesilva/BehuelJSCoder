@@ -124,9 +124,14 @@ function refreshShopp(){
   newContainer.setAttribute("style", "display:flex; flex-flow: column wrap");
   prods.forEach(product => {
     const view_shopp = JSON.parse(localStorage.getItem("Carrito"));
-    const {nombre, precio} = view_shopp// Desestructuracion
+    const {nombre, precio} = product// Desestructuracion
     let nodoLi = document.createElement("div");
-    nodoLi.innerText = `${nombre} - ${precio}`;
+    if(view_shopp){
+    nodoLi.innerText = `${product.cantidad} - ${nombre} - ${precio}  <br> `;
+    }
+    else{
+      nodoLi.innerText = `1 - ${nombre} - ${precio}`;
+    }
     newContainer.appendChild(nodoLi);
   })
   container.appendChild(newContainer);
