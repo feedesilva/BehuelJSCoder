@@ -101,12 +101,7 @@ function addtoShopp(idProduct){
  
   //Verifico si el producto ya existe en el carrito
  { if(tienda.hasOwnProperty(product.id)){ 
-  if(isNaN(product.cantidad)){
-    product.cantidad = 1;
-  }
-  else{
-    product.cantidad++;
-  }
+    parseInt(product.cantidad++);
     console.log("La cantidad es: " + product.cantidad);
   }else{
   tienda[product.id] = {...product};
