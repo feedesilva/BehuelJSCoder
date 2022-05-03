@@ -98,9 +98,7 @@ function addtoShopp(idProduct){
   let products = stockProductos.map(el=>el.id);
   let index = products.findIndex(el=>el===idProduct);
   let product = stockProductos[index];
- 
-  console.log(tienda);
-  //TOASTIFY//  
+   //TOASTIFY//  
   Toastify({
     text: "Producto Agregado 🛒",
     position: "right",
@@ -129,9 +127,6 @@ function refreshShopp(){
     nodoLi.innerHTML = '';
     if(view_shopp){
       nodoLi.innerHTML = `${product.cantidad} - ${nombre} - ${precio}  <br> `;
-    }
-    else{
-      nodoLi.innerText = `1 - ${nombre} - ${precio}`;
     }
     newContainer.appendChild(nodoLi);
   })
