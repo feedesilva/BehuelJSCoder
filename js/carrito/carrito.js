@@ -98,6 +98,7 @@ function addtoShopp(idProduct){
   let products = stockProductos.map(el=>el.id);
   let index = products.findIndex(el=>el===idProduct);
   let product = stockProductos[index];
+
    //TOASTIFY//  
   Toastify({
     text: "Producto Agregado 🛒",
@@ -109,8 +110,11 @@ function addtoShopp(idProduct){
       borderRadius: "10px",
     }
   }).showToast();
+ 
   tienda.addProducto(product);
+
   refreshShopp();
+ 
 }
 
 
@@ -120,19 +124,22 @@ function pintarCarrito(){
   items.innerHTML = '';
   const template = document.querySelector("#template-carrito").content;
   const fragment = document.createDocumentFragment();
+  template.innerHTML = '';
+  
   Object.values(tienda).forEach(producto => {
+    const{id, cantidad, nombre, precio} = producto;
     console.log(producto);
-    if(!undefined){
-    template.querySelector('th').innerHTML = `${producto.id}`;
-    template.querySelectorAll('td')[0].innerHTML = `${producto.nombre}`;
-    template.querySelectorAll('td')[1].innerHTML = `${producto.cantidad}`;
-    let precioprodutcto = producto.precio * producto.cantidad;
-    template.querySelector('span').innerHTML =`${precioprodutcto}`;
+    template.querySelector('th').innerHTML = `${id}`;
+    template.querySelectorAll('td')[0].innerHTML = `${nombre}`;
+    template.querySelectorAll('td')[1].innerHTML = `${cantidad}`;
+    template.querySelector('span').innerHTML =`${precio * cantidad}`;
+    
     const clone = template.cloneNode(true);
     fragment.appendChild(clone);
-    }
+
   })
   items.appendChild(fragment);
+  
 }
 
 
@@ -140,18 +147,18 @@ function pintarCarrito(){
 function refreshShopp(){
   let container = document.querySelector("#shopp");
   container.innerHTML="";
-  //let prods = tienda.productos;
-  //let newContainer = document.createElement("div");
+  let prods = tienda.productos;
+  let newContainer = document.createElement("div");
   newContainer.setAttribute("style", "display:flex; flex-flow: column wrap");
-  // prods.forEach(product => {
-    //const view_shopp = JSON.parse(localStorage.getItem("Carrito"));
-    // const {cantidad, nombre, precio} = product// Desestructuracion
-    //let nodoLi = document.createElement("div");
-   // nodoLi.innerHTML = `${view_shopp}`;
-    // nodoLi.innerHTML = "";
-    // nodoLi.innerHTML = `<br>${cantidad} - ${nombre} - ${precio}   <br> `;
-    //newContainer.appendChild(nodoLi);
-//})
+  prods.forEach(product => {
+    const view_shopp = JSON.parse(localStorage.getItem("Carrito"));
+    const {cantidad, nombre, precio} = product// Desestructuracion
+    let nodoLi = document.createElement("div");
+    nodoLi.innerHTML = `${view_shopp}`;
+     nodoLi.innerHTML = "";
+     nodoLi.innerHTML = `<br>${cantidad} - ${nombre} - ${precio}   <br> `;
+    newContainer.appendChild(nodoLi);
+})
   container.appendChild(newContainer);
 
   tienda.save();
