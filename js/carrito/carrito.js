@@ -113,8 +113,8 @@ function addtoShopp(idProduct){
   refreshShopp();
 }
 
-/*
 
+//CARRITO//
 const items = document.querySelector("#items");
 function pintarCarrito(){
   items.innerHTML = '';
@@ -122,34 +122,35 @@ function pintarCarrito(){
   const fragment = document.createDocumentFragment();
   Object.values(tienda).forEach(producto => {
     console.log(producto);
-    console.log("LOL");
-
+    if(!undefined){
     template.querySelector('th').innerHTML = `${producto.id}`;
     template.querySelectorAll('td')[0].innerHTML = `${producto.nombre}`;
     template.querySelectorAll('td')[1].innerHTML = `${producto.cantidad}`;
-    template.querySelector('span').innerHTML =`${producto.precio}`;
-     const clone = template.cloneNode(true)
-     fragment.appendChild(clone)
+    let precioprodutcto = producto.precio * producto.cantidad;
+    template.querySelector('span').innerHTML =`${precioprodutcto}`;
+    const clone = template.cloneNode(true);
+    fragment.appendChild(clone);
+    }
   })
-  items.appendChild(fragment)
+  items.appendChild(fragment);
 }
-*/
+
 
 //REVISAR///
 function refreshShopp(){
   let container = document.querySelector("#shopp");
   container.innerHTML="";
   //let prods = tienda.productos;
-  let newContainer = document.createElement("div");
+  //let newContainer = document.createElement("div");
   newContainer.setAttribute("style", "display:flex; flex-flow: column wrap");
   // prods.forEach(product => {
-    const view_shopp = JSON.parse(localStorage.getItem("Carrito"));
+    //const view_shopp = JSON.parse(localStorage.getItem("Carrito"));
     // const {cantidad, nombre, precio} = product// Desestructuracion
-    let nodoLi = document.createElement("div");
-    nodoLi.innerHTML = `${view_shopp}`;
+    //let nodoLi = document.createElement("div");
+   // nodoLi.innerHTML = `${view_shopp}`;
     // nodoLi.innerHTML = "";
     // nodoLi.innerHTML = `<br>${cantidad} - ${nombre} - ${precio}   <br> `;
-    newContainer.appendChild(nodoLi);
+    //newContainer.appendChild(nodoLi);
 //})
   container.appendChild(newContainer);
 
