@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
     <link rel="stylesheet" href="../estilos/main.css">   
+    <script defer src="../js/carrito/carrito.js"></script>
     <script  src="../js/carrito/categorias.js"></script>
     <script  src="../js/carrito/shopp_class.js"></script>
-    <script defer src="../js/carrito/product.js"></script>
-    <script defer src="../js/carrito/carrito.js"></script>
+    <script  src="../js/carrito/product.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
@@ -35,8 +35,8 @@
     </nav>
     <main>
       
-      <div class="container_carrito">
-        <h4>Carrito de compras</h4>
+      <div class="container_carrito" id="div_C">
+        <h4 class="titulo_carrito">Carrito de compras</h4>
         <div class="container_table">
         <table class="table">
           <thead>
@@ -50,7 +50,7 @@
           <tbody id="items"></tbody>
           <tfoot>
             <tr id="footer">
-              <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+              <th scope="row" colspan="5" id="carrito_Vacio">Carrito vacío - comience a comprar!</th>
             </tr>
           </tfoot>
         </table>
@@ -76,6 +76,7 @@
         <td>$ <span>500</span></td>
       </tr>
     </template>
+
     <div id="show"></div>
       <div id="big_space"></div>
     </main>

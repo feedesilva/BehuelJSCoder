@@ -1,6 +1,7 @@
 .group{
     display:  flex;
     flex-flow: row wrap;
+    margin-right: 70px;
 }
 .productWrapper{
     margin:2%;
@@ -35,33 +36,31 @@
     display:flex;
 
 }
-#productos, #shopp{
+#productos{
     display: flex;
     margin-top:10px;
-    border: 2px solid cornflowerblue;
-    border-radius: 20px;
     padding: 3%;
     flex-wrap: wrap;
-    width:40%;
+    width:100%;
     margin-left: 20px;
 }
- //AHORA/
- .container_table{
-     display: flex;
-     flex-flow: column;
-     justify-content: center;
-     align-items: center;
+
+.container_table{
+      width: 40%;
+      display: flex;
+      flex-flow: column;
      text-align: center;
-     
+     background-color: white;
+     border-radius: 10px;
  }
 .container_carrito{
-
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
 }
 
-table{
-    text-align: center;
-    
+.titulo_carrito{
+    margin: 20px;
+    font-size: 20px;
 }
+
