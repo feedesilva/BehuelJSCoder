@@ -29,13 +29,13 @@ function mostrarBack(){
 }
 
 //Muestro precio final//
-const precio_card = JSON.parse(localStorage.getItem("Precio"));
+const precio_card = subtotal_envio;
 console.log(precio_card);
-let div_precio = document.querySelector("#precio");
+let div_p = document.querySelector("#precio");
 let subtotal = document.createElement("h3");
 subtotal.setAttribute("class", "precioFinal")
 subtotal.innerHTML = "El precio final es: $" + precio_card;
-div_precio.appendChild(subtotal);
+div_p.appendChild(subtotal);
 
 
 //Creo opciones de mes//
@@ -197,7 +197,7 @@ function interesVisa(){
             //Modifico el precio msotrado//
             subtotal.innerHTML = '';
             subtotal.innerHTML = "El precio final es: $" + precio_Int;
-            div_precio.appendChild(subtotal);
+            div_p.appendChild(subtotal);
 }
 
 //Calculo los intereses para la tarjeta master//
@@ -217,7 +217,7 @@ function interesMaster(){
             let precio_Int = parseInt(cuotas_precio);
             subtotal.innerHTML = '';
             subtotal.innerHTML = "El precio final es: $" + precio_Int;
-            div_precio.appendChild(subtotal);
+            div_p.appendChild(subtotal);
 }
 
 //Input Nombre//
@@ -246,7 +246,7 @@ inputCvv.addEventListener("keypress", (e)=>{
     let valorinput = String.fromCharCode(codigoinput);
     console.log(valorinput);
     valorParsed = parseInt(valorinput);
-    if(valorParsed){
+    if(valorParsed || codigoinput === 48){
         if(inputCvv.value.length <3){ //LIMITO A 3 DIGITOS
     inputCvv.value += valorParsed;
         }

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Envío</title>
     <script defer src="../js/compra/envio.js"></script>
+    <script src="../js/compra/barrios.js"></script>
+    <script src="../js/compra/form_envio.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="../estilos/main.css">
 
@@ -33,8 +35,61 @@
     <main>
       <div class="main_envios" id="main_envios">
         <div id="container_btn"></div>
+        <div id="precio_envio"></div>
       </div>
-      <div id="form_envio"></div>
+      <!-- form envio -->
+      <form action="" id="form_envio">
+        <h2 class="datos">Datos de Envío</h2>
+        <div class="envio_nombre">
+          <div class="nombre">
+            <label for="nombre_envio">Nombre</label>
+            <input type="text" id="nombre_envio" autocomplete="off" required>
+          </div>
+          <div class="apellido">
+            <label for="apellido_envio">apellido</label>
+            <input type="text" id="apellido_envio" autocomplete="off" required>
+          </div>
+        </div>
+        <div class="localidad">
+          <div class="comuna">
+            <select name="comuna" id="selectComuna" required>
+              <option disabled selected>Comuna</option>
+          </select>
+          </div>
+          <div class="barrio">
+            <select name="barrio" id="selectBarrio" required>
+              <option disabled selected>Barrio</option>
+            </select>
+          </div>
+        </div>
+        <div class="direc">
+          <div class="direction">
+            <label for="direccion_envio">Direccion</label>
+            <input type="text" id="direccion_envio" autocomplete="off" required>
+          </div>
+          <div class="cp">
+            <label for="codPostal">CP</label>
+            <input type="text" id="codPostal" autocomplete="off" required>
+          </div>
+        </div>
+        <div class="div_tel">
+          <div class="tel">
+            <label for="cel_envio">Celular</label>
+            <input type="text" id="cel_envio" autocomplete="off" required>
+          </div>
+        </div>
+        <div id="div_btnForm">
+          <button id="btnForm" class="btn_enviar">Enviar</button>
+        </div>
+      </form>
     </main>
+    <footer class="footer">
+      <a href="../index.html"><img src="../assets/logo.jpg" alt="LOGO" class="logo footer__img"></a>
+        <div class="redes">
+          <img class="redes__sociales" src="../assets/whattsapp.png" alt="WPP"><a href=""></a>
+          <img class="redes__sociales" src="../assets/twitter.png" alt="Twitter"><a href=""></a>
+          <img class="redes__sociales" src="../assets/instagram_a.png" alt="Instagram"><a href=""></a>
+        </div>
+    </footer>
 </body>
 </html>

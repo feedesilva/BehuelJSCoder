@@ -9,6 +9,7 @@
 .main_envios{
     display: flex;
     justify-content: center;
+    align-items: end;
 }
 
 #container_btn{
@@ -49,16 +50,100 @@
 
 .btn_selected{
     background-color: #9999;
-    
 }
-
-.form_envio{
+//FORM ENVIO//
+#form_envio{
     background-color: white;
     width: 100%;
     max-width: 700px;
-    padding: 150px 30px 30px 30px;
+     padding: 30px;
     border-radius: 20px;
     position: relative;
-    z-index: 1;
+     margin-top: 50px;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0 ); //Escondo el formulario//
     transition: all 0.2s ease;
+    justify-content: flex-start;
+
+}
+
+#form_envio.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100% );
+}
+
+#form_envio label{
+    display: block;
+    margin-bottom: 5px;
+    color: #7d8994;
+    font-size: 1rem;
+}
+#form_envio input{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.datos{
+    margin-top: 0;
+    font-size: 20px;
+    text-align: center;
+    margin: 5px;
+    font-weight: bold;
+}
+.envio_nombre{
+    display: flex;
+    justify-content: space-evenly;
+}
+.nombre, .apellido{
+    width: 45%;
+}
+#form_envio input, select, .btn_enviar{
+    border: 2px solid aquamarine;
+    font-size: 18px;
+    height: 50px;
+    width: 100%;
+    padding: 5px 12px;
+    transition: all .3s ease;
+    border-radius: 5px;
+}
+.btn_enviar{
+    width: 50%;
+    &:hover{
+        background-color: #999399;
+    }
+}
+#div_btnForm{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+.localidad, .direc{
+    display: flex;
+    flex-flow: row, wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.comuna, .barrio, .direction, .cp {
+    width: 45%;
+    margin: 5px;
+}
+
+.div_tel{
+    display: flex;
+    flex-flow: column ;
+    align-items:stretch;
+    margin-left: 20px;
+    width: 45%;
+}
+
+//PRECIO//
+#precio_envio{
+    background-color: rgb(5, 91, 126);
+    width: 10%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    color: white;
 }
