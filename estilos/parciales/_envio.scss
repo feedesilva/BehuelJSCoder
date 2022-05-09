@@ -51,6 +51,31 @@
 .btn_selected{
     background-color: #9999;
 }
+//RECOGER//
+#btn_TiendaRecoger{
+    border: 2px solid aquamarine;
+    font-size: 18px;
+    height: 50px;
+    width: 20%;
+    border-radius: 20px;
+}
+
+#btn_enviarRecoger{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;  
+    margin-left: -80px; 
+    border-radius: 20px;
+    width: 100%;
+}
+
+.envio_mainContainer{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:center;
+}
+
+
 //FORM ENVIO//
 #form_envio{
     background-color: white;
@@ -63,8 +88,8 @@
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0 ); //Escondo el formulario//
     transition: all 0.2s ease;
     justify-content: flex-start;
-
 }
+
 
 #form_envio.active{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100% );
@@ -110,12 +135,11 @@
         background-color: #999399;
     }
 }
-#div_btnForm{
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-}
+// #div_btnForm{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
 .localidad, .direc{
     display: flex;
     flex-flow: row, wrap;

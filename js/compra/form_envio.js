@@ -3,8 +3,11 @@ function  f_Form(){
     nombre_form();
     cod_postal();
     nro_cel();
+    let btn_form = document.querySelector("#btnForm");
+    btn_form.addEventListener("click", ()=>{
+        alert("HECHO")
+    })
 }
-
 function select_comuna(){
     for(i = 1; i<16;i++){
         let option = document.createElement("option");

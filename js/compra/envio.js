@@ -17,6 +17,10 @@ let div_precio = document.querySelector("#precio_envio");
 let subtotal_envio = JSON.parse(localStorage.getItem("Precio"));
 let precio_final = document.createElement("span");
 
+let div_TiendaRecoger = document.querySelector("#btn_enviarRecoger");
+let btn_TiendaRecoger = document.createElement("button")
+btn_TiendaRecoger.setAttribute("id", "btn_TiendaRecoger")
+btn_TiendaRecoger.innerHTML="ENVIAR"
 
 function section_envio(){
     precio();    
@@ -42,15 +46,21 @@ function retirar(){
     precio_recoger.setAttribute("class","label_envio")
     btn_recoger.appendChild(precio_recoger);
     container.appendChild(retiro_container);
-    //cambiar a toggle//
+
     btn_recoger.addEventListener("click",() =>{
-        btn_recoger.classList.toggle('btn_selected')
+        btn_recoger.classList.toggle('btn_selected');
         if(btn_evio.classList.contains('btn_selected')){
-            btn_evio.classList.remove('btn_selected')
-            btn_evio.disabled = false
-            envio_form.classList.toggle("active")
+            btn_evio.classList.remove('btn_selected');
+            btn_evio.disabled = false;
+            envio_form.classList.toggle("active");
             subtotal_envio-=300;
+            
         }
+        div_TiendaRecoger.appendChild(btn_TiendaRecoger);
+        // div_TiendaRecoger.innerHTML = `<button id="btn_TiendaRecoger">Enviar</button>`
+        btn_TiendaRecoger.addEventListener("click", ()=>{
+            location =  "pago.html";
+        })
         precio()
         btn_recoger.disabled = true
     
@@ -71,11 +81,15 @@ function enviar(){
         if(btn_recoger.classList.contains('btn_selected')){
             btn_recoger.classList.remove('btn_selected')
             btn_recoger.disabled = false
+            div_TiendaRecoger.innerHTML = "";
         }
+        
         subtotal_envio+=300;    
         precio()
+        
         btn_evio.disabled = true
         envio_form.classList.toggle("active")
+     
     })
     
 }
@@ -83,8 +97,3 @@ function enviar(){
 section_envio();
 
 //REVISAR DOBLE CLICK//
-let btn_form = document.querySelector("#btnForm");
-btn_form.addEventListener("click", ()=>{
-    location = "pago.html";
-    console.log("PAAGO");
-})
