@@ -25,7 +25,7 @@
                   <div class="navbar-nav menu__div__sections">
                     <a class="nav-link Home menu__div__sections__link" aria-current="page" href="../index.html">Home</a>
                     <a class="nav-link  menu__div__sections__link" href="contacto.html">Contactanos</a>
-                    <a href="carrito.html" class="nav-link menu__div__sections__link">CARRITO</a>
+                    <a href="productos.html" class="nav-link menu__div__sections__link">Productos</a>
                   </div>
                 </div>
               </div>
@@ -33,13 +33,13 @@
           </nav>
     </header>
     <main>
+      <!-- Botones de seleccionar tipo de envio -->
       <div class="envio_mainContainer">
         <div class="main_envios" id="main_envios">
           <div id="container_btn"></div>
           <div id="precio_envio"></div>
         </div>
-        <div id="btn_enviarRecoger">
-        </div>
+        <div id="div_enviarRecoger"></div>
       </div>
       <!-- form envio -->
       <form action="" id="form_envio">
@@ -47,18 +47,18 @@
         <div class="envio_nombre">
           <div class="nombre">
             <label for="nombre_envio">Nombre</label>
-            <input type="text" id="nombre_envio" autocomplete="off" required>
+            <input type="text" id="nombre_envio" required>
           </div>
           <div class="apellido">
             <label for="apellido_envio">apellido</label>
-            <input type="text" id="apellido_envio" autocomplete="off" required>
+            <input type="text" id="apellido_envio" required>
           </div>
         </div>
         <div class="localidad">
           <div class="comuna">
             <select name="comuna" id="selectComuna" required>
               <option disabled selected>Comuna</option>
-          </select>
+            </select>
           </div>
           <div class="barrio">
             <select name="barrio" id="selectBarrio" required>
@@ -69,23 +69,20 @@
         <div class="direc">
           <div class="direction">
             <label for="direccion_envio">Direccion</label>
-            <input type="text" id="direccion_envio" autocomplete="off" required>
+            <input type="text" id="direccion_envio" required>
           </div>
           <div class="cp">
             <label for="codPostal">CP</label>
-            <input type="text" id="codPostal" autocomplete="off" required>
+            <input type="text" id="codPostal" required>
           </div>
         </div>
         <div class="div_tel">
           <div class="tel">
             <label for="cel_envio">Celular</label>
-            <input type="text" id="cel_envio" autocomplete="off" required>
+            <input type="text" id="cel_envio" required>
           </div>
         </div>
-        <!-- <div id="div_btnForm"> -->
-          <a href="./pago.html"><button id="btnForm" class="btn_enviar">Enviar </button></a>
-          <!-- <button id="btnForm" class="btn_enviar" type="submit">Enviar <a href="./pago.html"></a></button> -->
-        <!-- </div> -->
+        <div id="div_btnForm"></div>
       </form>
     </main>
     <footer class="footer">

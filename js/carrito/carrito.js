@@ -1,8 +1,16 @@
+//CARRITO//
+//VARIABLES Y CREACIONES DE ELEMENTOS GLOBALES//
+let tienda = new Tienda ([]);
 let preciofinal = 0 ;
+let vaciar_leyenda = document.querySelector("#carrito_Vacio");
+const items = document.querySelector("#items");
+let btn_div = document.createElement("div");
+let buy_btn = document.createElement("button");
+let reset_btn = document.createElement("button");
+
 show_cat();
 
 //Verifico local storage y edito Tienda//
-let tienda = new Tienda ([]);
 const data = JSON.parse(localStorage.getItem("Shop"));
 if(data){
   tienda = new Tienda(data);
@@ -18,7 +26,6 @@ function show_cat (){
     btn.addEventListener("click", ()=>
      show_element (cat))
     container.appendChild(btn);
-
 })
 
 }
@@ -58,7 +65,7 @@ function show_element(group){
 }
 
 
-
+//Funcion de asignar info a cada producto//
 function product_information(product){
   return `
         <div class= "group">
@@ -82,12 +89,15 @@ function product_information(product){
 function btn_prod(prod){  
   return `<button class="comprar btn-primary btn" onclick="addtoShopp (${prod.id})">Agregar al Carrito</button>`
 }
+
+//Agrego los productos al carrito//
 function addtoShopp(idProduct){
   let products = stockProductos.map(el=>el.id);
   let index = products.findIndex(el=>el===idProduct);
   let product = stockProductos[index];
 
    //TOASTIFY//  
+   //Cartel de producto agregado//
   Toastify({
     text: "Producto Agregado 🛒",
     position: "right",
@@ -98,48 +108,49 @@ function addtoShopp(idProduct){
       borderRadius: "10px",
     }
   }).showToast();
-  
+  //funcion que agrega los productos seleccionados//
   tienda.addProducto(product);
+  //Actualizo el carrito//
   refreshShopp();
   
 }
-let pesos = JSON.parse(localStorage.getItem("Precio"))
 
-//CARRITO//
-let vaciar_leyenda = document.querySelector("#carrito_Vacio");
-const items = document.querySelector("#items");
+
+//Agrego cada producto a la tabla//
 function pintarCarrito(){
   vaciar_leyenda.innerHTML=""
+  //Elimino la leyenda de carrito vacio//
   items.innerHTML = '';
   const template = document.querySelector("#template-carrito").content; 
   const fragment = document.createDocumentFragment();
   template.innerHTML = '';
   
+  //Recorro el tienda y voy agregando los productos//
   Object.values(tienda).forEach(producto => {
     console.log(producto);
     
     for (const product of producto) {
-    template.querySelector('th').innerHTML = `${product.id}`;
-    template.querySelectorAll('td')[0].innerHTML = `${product.nombre}`;
-    template.querySelectorAll('td')[1].innerHTML = `${product.cantidad}`;
-    template.querySelector('span').innerHTML =`${product.precio * product.cantidad}`;
+      template.querySelector('th').innerHTML = `${product.id}`;
+      template.querySelectorAll('td')[0].innerHTML = `${product.nombre}`;
+      template.querySelectorAll('td')[1].innerHTML = `${product.cantidad}`;
+      template.querySelector('span').innerHTML =`${product.precio * product.cantidad}`;
     
-    const clone = template.cloneNode(true);
-    fragment.appendChild(clone);
+      const clone = template.cloneNode(true);
+      fragment.appendChild(clone);
     
-  }
+    }
   })
   items.appendChild(fragment);
-  
 }
 
 
-let btn_div = document.createElement("div");
-let buy_btn = document.createElement("button");
-let reset_btn = document.createElement("button");
+
+//Actualizo el carrito//
 function refreshShopp(){
   tienda.save();
-  vaciar_leyenda.innerHTML = `Precio final: $${preciofinal}` 
+  //muestro el precio//
+  vaciar_leyenda.innerHTML = `Precio final: $${preciofinal}`
+  //Al clickear el boton voy a envio// 
   let container = document.querySelector("#div_C");
   btn_div.style = "display:flex; flex-flow: row wrap";
   buy_btn.innerText = "Finalizar compra";
@@ -164,12 +175,16 @@ function product_filter(idgroup){
   return  stockProductos.filter(stockProductos=>stockProductos.categoria_producto===idgroup);
 }
 
-  //RESETEO EL CARRITO//
+//RESETEO EL CARRITO//
 reset_btn.addEventListener("click", ()=>{
+  //Reseteo la tabla//
    items.innerHTML="";
-  tienda= new Tienda([]);
+   //Reseteo tienda//
+   tienda= new Tienda([]);
    preciofinal=0;
+   //Vuelvo a poner la leyyenda//
    vaciar_leyenda.innerHTML = `Precio final: $${preciofinal}`;
+   //Cartel de carrito eliminado//
   Toastify({
     text:"Carrito Eliminado ❌",
     duration: 3000,

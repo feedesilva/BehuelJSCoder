@@ -1,4 +1,5 @@
 function init(){
     let link = document.getElementById("link_index");
-    link.innerHTML = `<span style = "color:red">Ir a carrito</span>`
+    link.innerHTML = `<span style = "color:black">Ir a productos</span>`
+    solicitados();
 }

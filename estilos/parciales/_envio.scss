@@ -18,6 +18,7 @@
     flex-flow: row;
     justify-content: space-between;
 }
+
 .retiro_container{
     display: flex;
     flex-direction: column;
@@ -28,6 +29,7 @@
     margin: 10px;
     align-content: center;
 }
+
 .label_envio{
     margin-left: 5px;
     color: green;
@@ -51,28 +53,28 @@
 .btn_selected{
     background-color: #9999;
 }
+
 //RECOGER//
+
 #btn_TiendaRecoger{
-    border: 2px solid aquamarine;
-    font-size: 18px;
-    height: 50px;
-    width: 20%;
     border-radius: 20px;
+    width: 300px;
 }
 
-#btn_enviarRecoger{
+#div_enviarRecoger{
     display: flex;
     justify-content: center;
-    margin-top: 25px;  
-    margin-left: -80px; 
+    align-items: center;
     border-radius: 20px;
-    width: 100%;
+    margin: 50px;
+    width: 40%;
 }
 
 .envio_mainContainer{
     display: flex;
     flex-flow: column wrap;
     justify-content:center;
+    align-items: center;
 }
 
 
@@ -113,13 +115,17 @@
     margin: 5px;
     font-weight: bold;
 }
+
+//INPUT Y LABEL
 .envio_nombre{
     display: flex;
     justify-content: space-evenly;
 }
+
 .nombre, .apellido{
     width: 45%;
 }
+
 #form_envio input, select, .btn_enviar{
     border: 2px solid aquamarine;
     font-size: 18px;
@@ -129,17 +135,7 @@
     transition: all .3s ease;
     border-radius: 5px;
 }
-.btn_enviar{
-    width: 50%;
-    &:hover{
-        background-color: #999399;
-    }
-}
-// #div_btnForm{
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
+
 .localidad, .direc{
     display: flex;
     flex-flow: row, wrap;
@@ -160,10 +156,34 @@
     width: 45%;
 }
 
+//BTN ENVIO//
+.btn_enviar{
+    width: 50%;
+    &:hover{
+        background-color: #999399;
+    }
+}
+
+#div_btnForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.btn_form_envio{
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
 //PRECIO//
 #precio_envio{
     background-color: rgb(5, 91, 126);
-    width: 10%;
+    width: 150px;
     height: 5vh;
     display: flex;
     align-items: center;

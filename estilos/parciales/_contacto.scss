@@ -1,6 +1,11 @@
+//CONTACTO//
+
+//Defino tamaño del main de contacto//
 .main_form{
     height: 70vh;
 }
+
+//Seteo estilos del form//
 form{
     max-width: 500px;
     margin: auto;
@@ -13,11 +18,7 @@ fieldset{
     text-align: center;
 }
 
-.saludo{
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
+//Cada elemento del form//
 .contenedor_form{
     position: relative;
     width: 100%;
@@ -25,7 +26,7 @@ fieldset{
     margin: 10px 0;
     text-align: center;
 }
-
+//Input de texto //
 .input_texto{
     font-size: 14px;
     width: 90%;
@@ -37,6 +38,7 @@ fieldset{
     border-radius: 10px;
 }
 
+//Label a flotar//
 .label_flotante{
     position: absolute;
     pointer-events: none;
@@ -45,8 +47,8 @@ fieldset{
     transition: .2s ease all;
 }
 
+//Traslado el label//
 .input_texto:focus + .label_flotante, .input_texto:not(:placeholder-shown) + .label_flotante {
-
     transform: translate(-0.3rem, -1.5rem);
     color: white;
     font-size: 12px;
@@ -56,18 +58,14 @@ fieldset{
     color: transparent;
 }
 
+//Estilos del btn de enviar//
 .btn{
     width: 150px;
     height: 30px;
     border: none;
     border-radius: 10px;
-   
 }
 
 .btn:hover{
     background-color: lightblue;
-}
-
-.title{
-    color: rgb(117, 231, 206);
 }

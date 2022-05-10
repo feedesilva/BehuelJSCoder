@@ -1,25 +1,26 @@
+//Formulario envio a domicilio//
 function  f_Form(){
     select_comuna();
     nombre_form();
     cod_postal();
     nro_cel();
-    let btn_form = document.querySelector("#btnForm");
-    btn_form.addEventListener("click", ()=>{
-        alert("HECHO")
-    })
+    btn_Enviar();
 }
+
+//Creo seleecion de comuna 1 al 15//
 function select_comuna(){
     for(i = 1; i<16;i++){
         let option = document.createElement("option");
-    option.value = i;
-    option.innerHTML=i;
-    comuna.appendChild(option);
+        option.value = i;
+        option.innerHTML=i;
+        comuna.appendChild(option);
     }
     comuna.addEventListener("change", ()=>{
-    select_barrio(comuna.value);
+        select_barrio(comuna.value);
     })
 }
 
+//Seteo los inputs de nombre y apellido, solo pueden ingresarse letras//
 function nombre_form(){
     nombre_envio.addEventListener("keypress", (e)=>{
         e.preventDefault();
@@ -37,6 +38,7 @@ function nombre_form(){
     })
 }
 
+//Seteo input de codigo postal. Solo pueden ingresarse 4 digitos numericos//
 function cod_postal(){
     let cp = document.querySelector("#codPostal");
     cp.addEventListener("keypress", (e)=>{
@@ -52,6 +54,7 @@ function cod_postal(){
     })
 }
 
+//Seteo input de celular. Solo pueden ingresarse 11 digitos numericos. Hace las separaciones de manera automática//
 function nro_cel(){
     let cel = document.querySelector("#cel_envio");
     cel.addEventListener("keypress", (e)=>{
@@ -62,10 +65,22 @@ function nro_cel(){
         if(valorParsed || codigoinput === 48){
             if(cel.value.length < 12){
                 if(cel.value.length === 2 || cel.value.length === 7)
-                cel.value += ' ' + valorParsed;
+                    cel.value += ' ' + valorParsed;
                 else
-                cel.value += valorParsed;
+                    cel.value += valorParsed;
             }
         }
     })
+}
+
+//Creo el botón de envío y redirijo al pago//
+function btn_Enviar(){
+    let div_btn = document.querySelector("#div_btnForm");
+    let btn_form = document.createElement("a");
+    btn_form.setAttribute("class", "btn_enviar  btn_form_envio");
+    btn_form.innerHTML = `Continuar con la compra`
+    btn_form.addEventListener("click", ()=>{
+        location = "./pago.html"
+    })
+    div_btn.appendChild(btn_form);
 }

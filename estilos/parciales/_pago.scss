@@ -98,7 +98,6 @@
 }
 
 #code{
-    
     margin-top: 60px;
     display: flex;
     flex-direction: column;
@@ -211,16 +210,6 @@ background-color: rgb(5, 5, 173);
     margin-right: 20px;
 }
 
-#btn_enviar{
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    background-color: lightblue;
-    &:hover{
-        background-color: blue;
-    }
-}
-
 #precio{
     background-color: white;
     width: 30%;
@@ -239,4 +228,10 @@ background-color: rgb(5, 5, 173);
 #div_cuotas{
     margin-bottom: 5px;
     width: 25%;
+}
+
+//Sweet Alert//
+#btn_pago{
+    text-decoration: none;
+    color: black;
 }

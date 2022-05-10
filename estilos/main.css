@@ -5,6 +5,12 @@
           box-sizing: border-box;
 }
 
+main {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#636363), to(lightblue));
+  background-image: linear-gradient(to bottom, #636363, lightblue);
+  height: 170vh;
+}
+
 a {
   text-decoration: none;
 }
@@ -22,14 +28,16 @@ h5 {
   font-size: 1.2rem;
 }
 
-nav {
-  height: 23vh;
+header {
+  height: 15vh;
+  background-color: #9999;
 }
 
 .logo {
   width: 7rem;
   border: none;
   border-radius: 5rem;
+  margin-top: 3px;
 }
 
 .bg_menu {
@@ -83,12 +91,6 @@ nav {
   background-color: white;
 }
 
-main {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#636363), to(lightblue));
-  background-image: linear-gradient(to bottom, #636363, lightblue);
-  height: 170vh;
-}
-
 .home {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -139,6 +141,7 @@ main {
   margin: 10px 10px;
   padding: 10px;
   width: 45%;
+  border-radius: 200px;
 }
 
 #link_index {
@@ -214,7 +217,7 @@ main {
 }
 
 .comprar {
-  color: red;
+  color: black;
   padding: 5px;
   border: 1px solid black;
   background-color: white;
@@ -234,11 +237,6 @@ form {
 fieldset {
   border: none;
   text-align: center;
-}
-
-.saludo {
-  font-size: 24px;
-  margin-bottom: 10px;
 }
 
 .contenedor_form {
@@ -301,10 +299,6 @@ fieldset {
 
 .btn:hover {
   background-color: lightblue;
-}
-
-.title {
-  color: #75e7ce;
 }
 
 .group {
@@ -689,17 +683,6 @@ fieldset {
   margin-right: 20px;
 }
 
-#btn_enviar {
-  width: 200px;
-  height: 50px;
-  text-align: center;
-  background-color: lightblue;
-}
-
-#btn_enviar:hover {
-  background-color: blue;
-}
-
 #precio {
   background-color: white;
   width: 30%;
@@ -722,6 +705,11 @@ fieldset {
 #div_cuotas {
   margin-bottom: 5px;
   width: 25%;
+}
+
+#btn_pago {
+  text-decoration: none;
+  color: black;
 }
 
 .img_envio {
@@ -809,24 +797,23 @@ fieldset {
 }
 
 #btn_TiendaRecoger {
-  border: 2px solid aquamarine;
-  font-size: 18px;
-  height: 50px;
-  width: 20%;
   border-radius: 20px;
+  width: 300px;
 }
 
-#btn_enviarRecoger {
+#div_enviarRecoger {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 25px;
-  margin-left: -80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 20px;
-  width: 100%;
+  margin: 50px;
+  width: 40%;
 }
 
 .envio_mainContainer {
@@ -840,6 +827,9 @@ fieldset {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #form_envio {
@@ -908,14 +898,6 @@ fieldset {
   border-radius: 5px;
 }
 
-.btn_enviar {
-  width: 50%;
-}
-
-.btn_enviar:hover {
-  background-color: #999399;
-}
-
 .localidad, .direc {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -950,9 +932,45 @@ fieldset {
   width: 45%;
 }
 
+.btn_enviar {
+  width: 50%;
+}
+
+.btn_enviar:hover {
+  background-color: #999399;
+}
+
+#div_btnForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.btn_form_envio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 20px;
+}
+
 #precio_envio {
   background-color: #055b7e;
-  width: 10%;
+  width: 150px;
   height: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;

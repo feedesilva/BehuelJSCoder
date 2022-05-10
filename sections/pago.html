@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal de pago</title>
     <script defer src="../js/compra/pago.js"></script>
-    <script src="../js/carrito/carrito.js"></script>
+    <!-- <script src="../js/carrito/carrito.js"></script> -->
     <script src="../js/compra/envio.js"></script>
+    <script src="../js/carrito/categorias.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="../estilos/main.css">
 </head>
@@ -24,7 +25,7 @@
                 <div class="navbar-nav menu__div__sections">
                   <a class="nav-link Home menu__div__sections__link" aria-current="page" href="../index.html">Home</a>
                   <a class="nav-link  menu__div__sections__link" href="contacto.html">Contactanos</a>
-                  <a href="carrito.html" class="nav-link menu__div__sections__link">CARRITO</a>
+                  <a href="productos.html" class="nav-link menu__div__sections__link">Productos</a>
                 </div>
               </div>
              
@@ -110,7 +111,7 @@
                 <option disabled selected>Cuotas</option>
             </select>
         </div>
-        <button id="btn_enviar" type="submit">Continuar con la compra</button>
+        <a id="btn_enviar" class="btn_enviar btn_form_envio">PAGAR</a>
         </form>
 
     </div>
