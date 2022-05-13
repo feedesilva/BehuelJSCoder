@@ -112,9 +112,7 @@ function addtoShopp(idProduct){
   tienda.addProducto(product);
   //Actualizo el carrito//
   refreshShopp();
-  
 }
-
 
 //Agrego cada producto a la tabla//
 function pintarCarrito(){
@@ -127,23 +125,17 @@ function pintarCarrito(){
   
   //Recorro el tienda y voy agregando los productos//
   Object.values(tienda).forEach(producto => {
-    console.log(producto);
-    
     for (const product of producto) {
       template.querySelector('th').innerHTML = `${product.id}`;
       template.querySelectorAll('td')[0].innerHTML = `${product.nombre}`;
       template.querySelectorAll('td')[1].innerHTML = `${product.cantidad}`;
       template.querySelector('span').innerHTML =`${product.precio * product.cantidad}`;
-    
       const clone = template.cloneNode(true);
       fragment.appendChild(clone);
-    
     }
   })
   items.appendChild(fragment);
 }
-
-
 
 //Actualizo el carrito//
 function refreshShopp(){
@@ -183,7 +175,7 @@ reset_btn.addEventListener("click", ()=>{
    tienda= new Tienda([]);
    preciofinal=0;
    //Vuelvo a poner la leyyenda//
-   vaciar_leyenda.innerHTML = `Precio final: $${preciofinal}`;
+   vaciar_leyenda.innerHTML = `Carrito vacío - comience a comprar!`;
    //Cartel de carrito eliminado//
   Toastify({
     text:"Carrito Eliminado ❌",

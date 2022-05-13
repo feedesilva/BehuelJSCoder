@@ -9,7 +9,10 @@ form.addEventListener("submit", (e)=>{
         icon: "success",
         confirmButtonText: "Genial",
     })
-    form.innerHTML = ''
-    new_messaje.innerHTML = `<h2>Gracias por su mensaje</h2>`
-    form.appendChild(new_messaje)
+    setTimeout(()=>{
+        form.innerHTML = ''
+        new_messaje.innerHTML = `<h2 class = "h2_Contact">Recibimos su mensaje. Pronto nos contactaremos</h2>`
+        console.log("GRACIAS");
+        form.appendChild(new_messaje)
+    },1500);
 })

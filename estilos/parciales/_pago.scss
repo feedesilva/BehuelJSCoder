@@ -21,6 +21,7 @@
     z-index: 2; //prioridad de superposicion
 }
 
+// Agrego rotacion
 #card.active{
     transform: rotateY(180deg);
 }

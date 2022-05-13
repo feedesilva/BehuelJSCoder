@@ -80,7 +80,7 @@ function enviar(){
     //Seteo el botón de envio//
     btn_evio.setAttribute("class", "btn_envios")
     envio_container.setAttribute("class", "retiro_container")
-    btn_evio.innerHTML = `<img class ="img_envio" src = "../assets/cargo-truck.png">Recoger en Tienda`;
+    btn_evio.innerHTML = `<img class ="img_envio" src = "../assets/cargo-truck.png">Envío a Domicilio`;
     envio_container.appendChild(btn_evio);
     precio_envio.innerText = "$300";
     precio_envio.setAttribute("class","label_envio")

@@ -6,8 +6,9 @@ class Tienda{
     //llega el producto encontrado en addtoshopp
 
     addProducto(producto)
-    {  
-      producto.cantidad = 1;
+    { 
+       producto.cantidad=1;
+
       tienda.productos.push(producto)
       pintarCarrito();
     }
